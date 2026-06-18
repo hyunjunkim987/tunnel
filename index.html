@@ -94,6 +94,10 @@
   .hero .bore-wrap{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;pointer-events:none}
   #bore{width:clamp(560px,92vmin,1120px);height:auto;opacity:.92;transform-origin:50% 42%;will-change:transform}
   #bore circle, #bore line{vector-effect:non-scaling-stroke}
+  #bore-spokes,#bore-cutters{transform-box:view-box;transform-origin:500px 420px;animation:cutter-spin 30s linear infinite}
+  @keyframes cutter-spin{to{transform:rotate(360deg)}}
+  .hero.is-paused #bore-spokes,.hero.is-paused #bore-cutters{animation-play-state:paused}
+  .scroll-progress{position:fixed;top:0;left:0;height:2px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:0 50%;z-index:200;will-change:transform;pointer-events:none}
   .hero-flash{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;transform-origin:50% 42%;background:radial-gradient(circle at 50% 42%, #F7F8F9 0%, rgba(247,248,249,.9) 26%, rgba(247,248,249,0) 62%)}
   .hero-inner{position:relative;z-index:4;width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--pad-x) clamp(72px,12vh,120px);will-change:opacity}
   .hero-inner::before{content:'';position:absolute;left:0;right:0;bottom:0;top:-40%;background:linear-gradient(to top,rgba(10,12,15,.92),rgba(10,12,15,.55) 38%,rgba(10,12,15,0) 78%);z-index:-1;pointer-events:none}
@@ -210,11 +214,14 @@
     html{scroll-behavior:auto}
     [data-reveal]{opacity:1;transform:none;transition:none}
     .chev{animation:none}
+    #bore-spokes,#bore-cutters{animation:none}
+    [data-parallax]{transform:none !important}
     *{scroll-behavior:auto}
   }
 </style>
 </head>
 <body>
+<div class="scroll-progress" aria-hidden="true"></div>
 <a class="skip" href="#hero" data-ko="본문으로 건너뛰기" data-en="Skip to content">Skip to content</a>
 
 <!-- ============================== NAV ============================== -->
@@ -260,6 +267,20 @@
         <line x1="456" y1="420"   x2="112" y2="420"/>
         <line x1="478" y1="381.9" x2="306" y2="84.1"/>
         <line x1="522" y1="381.9" x2="694" y2="84.1"/>
+      </g>
+      <g id="bore-cutters" fill="#E9EEF2">
+        <circle cx="888" cy="420" r="4" opacity=".3"/>
+        <circle cx="694" cy="755.9" r="4" opacity=".3"/>
+        <circle cx="306" cy="755.9" r="4" opacity=".3"/>
+        <circle cx="112" cy="420" r="4" opacity=".3"/>
+        <circle cx="306" cy="84.1" r="4" opacity=".3"/>
+        <circle cx="694" cy="84.1" r="4" opacity=".3"/>
+        <circle cx="710" cy="420" r="3" opacity=".22"/>
+        <circle cx="605" cy="601.9" r="3" opacity=".22"/>
+        <circle cx="395" cy="601.9" r="3" opacity=".22"/>
+        <circle cx="290" cy="420" r="3" opacity=".22"/>
+        <circle cx="395" cy="238.1" r="3" opacity=".22"/>
+        <circle cx="605" cy="238.1" r="3" opacity=".22"/>
       </g>
     </svg>
   </div>
@@ -320,7 +341,7 @@
 
     <div class="research-list">
       <article class="research-item" data-reveal>
-        <div class="ri-index" aria-hidden="true">01</div>
+        <div class="ri-index" aria-hidden="true" data-parallax="-0.05">01</div>
         <div>
           <h3 class="ri-title" data-ko="쉴드 TBM 테일 보이드용 2액형 뒤채움 그라우트" data-en="Two-component backfill grout for shield TBM tail void">Two-component backfill grout for shield TBM tail void</h3>
           <p class="ri-desc" data-ko="석사 학위논문. 뒤채움재 물성(플로우·겔화시간·가소성·일축압축강도·블리딩·점도)을 분석하고, 1:8 축소 터널 모형에서 주입 성능을 평가했다. 경화제(B액) 비율과 물–시멘트비에 따라 물성이 일관된 경향을 보였으며, 제안한 네 가지 지표(수밀성·충진성·균질도·건전성)는 현장 조건에 맞는 쉴드 TBM 뒤채움재 선정의 정량적 기준이 된다." data-en="Master's thesis. Characterized grout properties — flow, gel time, plasticity, compressive strength, bleeding, viscosity — and evaluated injection performance on a 1:8 scaled tunnel model. Hardener (Component B) dosage and water-to-cement ratio produced consistent property trends, and four proposed metrics — watertightness, fillability, homogeneity, soundness — give quantitative criteria for selecting a shield-TBM backfill grout to suit field conditions.">Master's thesis. Characterized grout properties — flow, gel time, plasticity, compressive strength, bleeding, viscosity — and evaluated injection performance on a 1:8 scaled tunnel model. Hardener (Component B) dosage and water-to-cement ratio produced consistent property trends, and four proposed metrics — watertightness, fillability, homogeneity, soundness — give quantitative criteria for selecting a shield-TBM backfill grout to suit field conditions.</p>
@@ -329,7 +350,7 @@
       </article>
 
       <article class="research-item" data-reveal>
-        <div class="ri-index" aria-hidden="true">02</div>
+        <div class="ri-index" aria-hidden="true" data-parallax="-0.05">02</div>
         <div>
           <h3 class="ri-title" data-ko="점토–박테리아 상호작용" data-en="Clay–bacteria interaction">Clay–bacteria interaction</h3>
           <p class="ri-desc" data-ko="카올린과 Shewanella oneidensis MR-1을 이용한 침강·압밀 시험으로, 미생물 상호작용이 퇴적물을 어떻게 치밀화하는지 규명 — 토양 정화와 퇴적물 안정화의 가능성." data-en="Sedimentation and consolidation tests with kaolin and Shewanella oneidensis MR-1, revealing how microbial interaction densifies sediments — pathways for soil remediation and sediment stabilization.">Sedimentation and consolidation tests with kaolin and Shewanella oneidensis MR-1, revealing how microbial interaction densifies sediments — pathways for soil remediation and sediment stabilization.</p>
@@ -338,7 +359,7 @@
       </article>
 
       <article class="research-item" data-reveal>
-        <div class="ri-index" aria-hidden="true">03</div>
+        <div class="ri-index" aria-hidden="true" data-parallax="-0.05">03</div>
         <div>
           <h3 class="ri-title" data-ko="CO₂ 처리 순환골재" data-en="CO₂-treated recycled aggregates">CO₂-treated recycled aggregates</h3>
           <p class="ri-desc" data-ko="탄산화 처리로 순환골재 성능을 개선 — 골재파쇄값(ACV) 30.3%까지 감소, 노상토지지력비(CBR) 137.7%까지 증가 — 하고 침출수 pH·크롬 농도를 낮춰 지속가능한 건설 재료에 기여했다." data-en="Carbonation treatment improved recycled-aggregate performance — crushing value reduced to 30.3% and CBR raised to 137.7% — while lowering leachate pH and chromium, advancing sustainable construction materials.">Carbonation treatment improved recycled-aggregate performance — crushing value reduced to 30.3% and CBR raised to 137.7% — while lowering leachate pH and chromium, advancing sustainable construction materials.</p>
@@ -347,7 +368,7 @@
       </article>
 
       <article class="research-item" data-reveal>
-        <div class="ri-index" aria-hidden="true">04</div>
+        <div class="ri-index" aria-hidden="true" data-parallax="-0.05">04</div>
         <div>
           <h3 class="ri-title" data-ko="점토 혼합 MICP 절리암반 차수" data-en="Clay-mixed MICP for rock-mass sealing">Clay-mixed MICP for rock-mass sealing</h3>
           <p class="ri-desc" data-ko="점토 혼합 미생물 유도 탄산칼슘 침전(MICP) 기법으로 절리암반을 차수하는 친환경 그라우팅 공법 개발 — 시멘트계 그라우트 의존을 줄인다." data-en="Developing an eco-friendly grouting method that uses clay-mixed microbially induced calcite precipitation (MICP) to seal jointed rock masses — reducing reliance on cement-based grouts.">Developing an eco-friendly grouting method that uses clay-mixed microbially induced calcite precipitation (MICP) to seal jointed rock masses — reducing reliance on cement-based grouts.</p>
@@ -620,14 +641,26 @@
   var bore = document.getElementById('bore');
   var heroInner = document.querySelector('.hero-inner');
   var flash = document.querySelector('.hero-flash');
+  var sp = document.querySelector('.scroll-progress');
+  var parallaxEls = document.querySelectorAll('[data-parallax]');
   var ticking = false;
   var heroH = hero ? hero.offsetHeight : window.innerHeight;
   function heroScroll(){
-    var p = Math.min(1, Math.max(0, window.scrollY / (heroH * 0.9)));
+    var sy = window.scrollY;
+    var p = Math.min(1, Math.max(0, sy / (heroH * 0.9)));
     if(heroInner) heroInner.style.opacity = String(1 - p);
     if(!reduce){
       if(bore) bore.style.transform = 'scale(' + (1 + p*0.12).toFixed(4) + ')';
       if(flash){ flash.style.opacity = String(p); flash.style.transform = 'scale(' + (0.5 + p*1.8).toFixed(3) + ')'; }
+    }
+    if(sp){ var dh = document.documentElement.scrollHeight - window.innerHeight; sp.style.transform = 'scaleX(' + (dh > 0 ? Math.min(1, sy/dh) : 0).toFixed(4) + ')'; }
+    if(!reduce && parallaxEls.length){
+      var vc = window.innerHeight / 2;
+      for(var pi=0; pi<parallaxEls.length; pi++){
+        var pe = parallaxEls[pi], pf = parseFloat(pe.getAttribute('data-parallax')) || 0;
+        var pr = pe.getBoundingClientRect();
+        pe.style.transform = 'translate3d(0,' + (((pr.top + pr.height/2) - vc) * pf).toFixed(1) + 'px,0)';
+      }
     }
     ticking = false;
   }
@@ -635,6 +668,11 @@
   window.addEventListener('scroll', function(){ onScrollNav(); requestHero(); }, {passive:true});
   window.addEventListener('resize', function(){ heroH = hero ? hero.offsetHeight : window.innerHeight; requestHero(); });
   heroScroll();
+  /* pause cutterhead rotation while hero is offscreen */
+  if('IntersectionObserver' in window && hero){
+    var spinIO = new IntersectionObserver(function(es){ hero.classList.toggle('is-paused', !es[0].isIntersecting); });
+    spinIO.observe(hero);
+  }
 
   /* ---------------- ring draw on load ---------------- */
   if(!reduce){
