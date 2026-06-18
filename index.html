@@ -11,6 +11,13 @@
 <meta property="og:title" content="Hyun-Jun Kim · 김현준 — Geotechnical / Tunnel Engineer" />
 <meta property="og:description" content="Bridging traditional geotechnics with smart construction — for safer, more efficient underground space." />
 <meta property="og:type" content="profile" />
+<meta property="og:image" content="https://hyunjunkim987.github.io/tunnel/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://hyunjunkim987.github.io/tunnel/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://hyunjunkim987.github.io/tunnel/og-image.png" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0C0F'/%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%23E9EEF2' stroke-width='1' opacity='.35'/%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23E9EEF2' stroke-width='1' opacity='.55'/%3E%3Ccircle cx='16' cy='16' r='6' fill='none' stroke='%23C8511B' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='16' r='3' fill='none' stroke='%23E9EEF2' stroke-width='1' opacity='.8'/%3E%3C/svg%3E" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -90,6 +97,7 @@
   .hero-flash{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;transform-origin:50% 42%;background:radial-gradient(circle at 50% 42%, #F7F8F9 0%, rgba(247,248,249,.9) 26%, rgba(247,248,249,0) 62%)}
   .hero-inner{position:relative;z-index:4;width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--pad-x) clamp(72px,12vh,120px);will-change:opacity}
   .hero-inner::before{content:'';position:absolute;left:0;right:0;bottom:0;top:-40%;background:linear-gradient(to top,rgba(10,12,15,.92),rgba(10,12,15,.55) 38%,rgba(10,12,15,0) 78%);z-index:-1;pointer-events:none}
+  .hero-avatar{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:center 30%;border:1px solid rgba(233,238,242,.28);margin-bottom:24px;display:block}
   .hero-kicker{font-family:var(--mono);text-transform:uppercase;letter-spacing:.22em;font-size:clamp(11px,1.1vw,13px);color:#9DA8B2;margin-bottom:22px;font-weight:500;display:flex;align-items:center;gap:13px}
   html[data-lang="ko"] .hero-kicker{font-family:var(--kr);text-transform:none;letter-spacing:.04em;font-size:clamp(13px,1.3vw,15px)}
   h1.name{font-weight:600;line-height:.98;letter-spacing:-.03em;font-size:clamp(48px,9vw,132px);color:#F4F7F9}
@@ -155,6 +163,9 @@
 
   /* ============================== CV ============================== */
   .cv-block{margin-top:clamp(24px,4vh,44px)}
+  .cv-link{display:inline-block;margin-top:18px;font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid transparent;transition:border-color .25s}
+  html[data-lang="ko"] .cv-link{font-family:var(--kr);text-transform:none;letter-spacing:.01em;font-size:14.5px}
+  .cv-link:hover{border-bottom-color:var(--accent)}
   .cv-group-label{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:clamp(30px,5vh,48px) 0 6px}
   html[data-lang="ko"] .cv-group-label{font-family:var(--kr);text-transform:none;letter-spacing:.04em;font-size:13px}
   .cv-row{display:grid;grid-template-columns:170px 1fr auto;gap:clamp(16px,3vw,40px);align-items:baseline;padding:clamp(16px,2.4vh,24px) 0;border-top:1px solid var(--hairline);position:relative}
@@ -218,9 +229,9 @@
     <a class="nav-link" href="#contact" data-ko="연락처" data-en="Contact">Contact</a>
   </div>
   <div class="lang" role="group" aria-label="Language">
-    <button class="lang-btn" type="button" data-lang="ko" aria-pressed="false">KO</button>
-    <span class="lang-sep" aria-hidden="true">/</span>
     <button class="lang-btn" type="button" data-lang="en" aria-pressed="true">EN</button>
+    <span class="lang-sep" aria-hidden="true">/</span>
+    <button class="lang-btn" type="button" data-lang="ko" aria-pressed="false">KO</button>
   </div>
 </nav>
 
@@ -254,6 +265,7 @@
   </div>
   <div class="hero-flash" aria-hidden="true"></div>
   <div class="hero-inner">
+    <img class="hero-avatar" src="profile.jpg" alt="Hyun-Jun Kim" />
     <p class="hero-kicker" data-ko="지반공학 · 터널 · TBM" data-en="GEOTECHNICAL · TUNNEL · TBM SPECIALIST">GEOTECHNICAL · TUNNEL · TBM SPECIALIST</p>
     <h1 class="name" data-ko="김현준" data-en="Hyun-Jun Kim">Hyun-Jun Kim</h1>
     <p class="hero-mission" data-ko="전통 지반공학과 스마트 건설 기술을 잇다. 더 안전하고 효율적인 지하 공간을 위해." data-en="Bridging traditional geotechnics with smart construction — for safer, more efficient underground space.">Bridging traditional geotechnics with smart construction — for safer, more efficient underground space.</p>
@@ -311,7 +323,7 @@
         <div class="ri-index" aria-hidden="true">01</div>
         <div>
           <h3 class="ri-title" data-ko="쉴드 TBM 테일 보이드용 2액형 뒤채움 그라우트" data-en="Two-component backfill grout for shield TBM tail void">Two-component backfill grout for shield TBM tail void</h3>
-          <p class="ri-desc" data-ko="석사 학위논문. 뒤채움재 물성(플로우·겔화시간·가소성·일축압축강도·블리딩·점도)을 분석하고, 1:8 축소 터널 모형에서 주입 성능(수밀성·충진성·균질도·건전성)을 평가해 쉴드 TBM 뒤채움의 정량적 기준을 제시했다." data-en="Master's thesis. Characterized grout properties — flow, gel time, plasticity, compressive strength, bleeding, viscosity — and evaluated injection performance (watertightness, fillability, homogeneity, soundness) on a 1:8 scaled tunnel model, proposing quantitative criteria for shield-TBM backfilling.">Master's thesis. Characterized grout properties — flow, gel time, plasticity, compressive strength, bleeding, viscosity — and evaluated injection performance (watertightness, fillability, homogeneity, soundness) on a 1:8 scaled tunnel model, proposing quantitative criteria for shield-TBM backfilling.</p>
+          <p class="ri-desc" data-ko="석사 학위논문. 뒤채움재 물성(플로우·겔화시간·가소성·일축압축강도·블리딩·점도)을 분석하고, 1:8 축소 터널 모형에서 주입 성능을 평가했다. 경화제(B액) 비율과 물–시멘트비에 따라 물성이 일관된 경향을 보였으며, 제안한 네 가지 지표(수밀성·충진성·균질도·건전성)는 현장 조건에 맞는 쉴드 TBM 뒤채움재 선정의 정량적 기준이 된다." data-en="Master's thesis. Characterized grout properties — flow, gel time, plasticity, compressive strength, bleeding, viscosity — and evaluated injection performance on a 1:8 scaled tunnel model. Hardener (Component B) dosage and water-to-cement ratio produced consistent property trends, and four proposed metrics — watertightness, fillability, homogeneity, soundness — give quantitative criteria for selecting a shield-TBM backfill grout to suit field conditions.">Master's thesis. Characterized grout properties — flow, gel time, plasticity, compressive strength, bleeding, viscosity — and evaluated injection performance on a 1:8 scaled tunnel model. Hardener (Component B) dosage and water-to-cement ratio produced consistent property trends, and four proposed metrics — watertightness, fillability, homogeneity, soundness — give quantitative criteria for selecting a shield-TBM backfill grout to suit field conditions.</p>
           <span class="ri-tag" data-ko="모형 실험 · 주입 성능 · 한전 전력연구원" data-en="Model Testing · Injection Performance · KEPCO">Model Testing · Injection Performance · KEPCO</span><a class="dl" href="kim-hyunjun-ms-thesis-kaist-2025.pdf" target="_blank" rel="noopener" data-ko="학위논문 PDF" data-en="Read the thesis (PDF)">Read the thesis (PDF)&nbsp;<span class="ar" aria-hidden="true">↓</span></a>
         </div>
       </article>
@@ -330,7 +342,7 @@
         <div>
           <h3 class="ri-title" data-ko="CO₂ 처리 순환골재" data-en="CO₂-treated recycled aggregates">CO₂-treated recycled aggregates</h3>
           <p class="ri-desc" data-ko="탄산화 처리로 순환골재 성능을 개선 — 골재파쇄값(ACV) 30.3%까지 감소, 노상토지지력비(CBR) 137.7%까지 증가 — 하고 침출수 pH·크롬 농도를 낮춰 지속가능한 건설 재료에 기여했다." data-en="Carbonation treatment improved recycled-aggregate performance — crushing value reduced to 30.3% and CBR raised to 137.7% — while lowering leachate pH and chromium, advancing sustainable construction materials.">Carbonation treatment improved recycled-aggregate performance — crushing value reduced to 30.3% and CBR raised to 137.7% — while lowering leachate pH and chromium, advancing sustainable construction materials.</p>
-          <span class="ri-tag" data-ko="탄산화 · 지속가능성 · 한전 전력연구원" data-en="Carbonation · Sustainability · KEPCO">Carbonation · Sustainability · KEPCO</span>
+          <span class="ri-tag" data-ko="탄산화 · 지속가능성 · 한국수자원공사" data-en="Carbonation · Sustainability · K-water">Carbonation · Sustainability · K-water</span>
         </div>
       </article>
 
@@ -417,23 +429,24 @@
       <span class="label" data-ko="경력 · 학력" data-en="Experience &amp; Education">Experience &amp; Education</span>
     </div>
     <h2 class="heading" id="cv-h" data-reveal style="--i:1" data-ko="지나온 지층" data-en="The strata so far">The strata so far</h2>
+    <a class="cv-link" href="cv.html" data-reveal style="--i:2" data-ko="전체 이력서 — 보기 · 인쇄 →" data-en="Full CV — view &amp; print →">Full CV — view &amp; print →</a>
 
     <div class="cv-block">
       <p class="cv-group-label" data-reveal data-ko="경력" data-en="Experience">Experience</p>
       <div class="cv-row" data-reveal>
         <span class="cv-year">2026 —</span>
         <span class="cv-role"><span data-ko="GS건설 · R.I.F Tech. 연구원" data-en="Research Engineer — GS E&amp;C, R.I.F Tech.">Research Engineer — GS E&amp;C, R.I.F Tech.</span><span class="cv-note" data-ko="지반·터널 엔지니어링팀, 기반기술연구센터" data-en="Geotechnical &amp; Tunnel Engineering Team, Fundamental Technology Research Center">Geotechnical &amp; Tunnel Engineering Team, Fundamental Technology Research Center</span></span>
-        <span class="cv-gpa" data-ko="서울" data-en="Seoul">Seoul</span>
+        <span class="cv-gpa" data-ko="서울, 대한민국" data-en="Seoul, Republic of Korea">Seoul, Republic of Korea</span>
       </div>
       <div class="cv-row" data-reveal>
         <span class="cv-year" data-ko="2025.9 – 12" data-en="SEP – DEC 2025">SEP – DEC 2025</span>
         <span class="cv-role"><span data-ko="한국건설기술연구원(KICT) · 석사후연구원" data-en="Post-master’s Researcher — KICT">Post-master’s Researcher — KICT</span><span class="cv-note" data-ko="미래스마트건설연구본부 — 스마트시티 평가지표 산정, 디지털 트윈 기반 시설물 유지관리" data-en="Future &amp; Smart Construction Division — smart-city KPIs, digital-twin facility maintenance">Future &amp; Smart Construction Division — smart-city KPIs, digital-twin facility maintenance</span></span>
-        <span class="cv-gpa" data-ko="고양" data-en="Goyang">Goyang</span>
+        <span class="cv-gpa" data-ko="고양, 대한민국" data-en="Goyang, Republic of Korea">Goyang, Republic of Korea</span>
       </div>
       <div class="cv-row" data-reveal>
         <span class="cv-year" data-ko="2025.4 – 8" data-en="APR – AUG 2025">APR – AUG 2025</span>
-        <span class="cv-role"><span data-ko="KAIST · 위촉연구원" data-en="Commissioned Researcher — KAIST">Commissioned Researcher — KAIST</span><span class="cv-note" data-ko="지반에너지연구실 — 모형 및 실대형 실험 수행, 결과 분석" data-en="Geo-Energy Lab — model &amp; large-scale experiments, data analysis">Geo-Energy Lab — model &amp; large-scale experiments, data analysis</span></span>
-        <span class="cv-gpa" data-ko="대전" data-en="Daejeon">Daejeon</span>
+        <span class="cv-role"><span data-ko="KAIST · 연구원" data-en="Researcher — KAIST">Researcher — KAIST</span><span class="cv-note" data-ko="지반에너지연구실 — 모형 및 실대형 실험 수행, 결과 분석" data-en="Geo-Energy Lab — model &amp; large-scale experiments, data analysis">Geo-Energy Lab — model &amp; large-scale experiments, data analysis</span></span>
+        <span class="cv-gpa" data-ko="대전, 대한민국" data-en="Daejeon, Republic of Korea">Daejeon, Republic of Korea</span>
       </div>
 
       <p class="cv-group-label" data-reveal data-ko="학력" data-en="Education">Education</p>
@@ -500,7 +513,7 @@
     <div class="contact-meta" data-reveal style="--i:2">
       <div class="meta-col">
         <div class="meta-k" data-ko="위치" data-en="Location">Location</div>
-        <div class="meta-v" data-ko="대한민국 서울" data-en="Seoul, Korea">Seoul, Korea</div>
+        <div class="meta-v" data-ko="서울, 대한민국" data-en="Seoul, Republic of Korea">Seoul, Republic of Korea</div>
       </div>
       <div class="meta-col">
         <div class="meta-k" data-ko="소속" data-en="Affiliation">Affiliation</div>
