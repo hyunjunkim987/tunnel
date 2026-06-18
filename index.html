@@ -207,6 +207,18 @@
   .totop{cursor:pointer;transition:color .2s ease}
   .totop:hover{color:var(--accent)}
 
+  /* certificate lightbox + triggers */
+  button.pub-badge{background:none;cursor:pointer}
+  .pub-badge.cert-trigger::after,.cert-honor::after{content:' ↗';color:var(--accent)}
+  .pub-badge.cert-trigger:hover{background:var(--accent);color:#fff}
+  .pub-badge.cert-trigger:hover::after{color:#fff}
+  .cert-honor{-webkit-appearance:none;appearance:none;background:none;border:0;padding:0;margin:0;font-family:inherit;color:inherit;cursor:pointer;text-align:left}
+  .cert-honor::after{font-size:.62em;vertical-align:middle;margin-left:3px}
+  .cert-honor:hover{color:var(--accent)}
+  .lightbox{position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(8,10,13,.92);cursor:zoom-out}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:min(820px,94vw);max-height:92vh;border:1px solid rgba(255,255,255,.14);border-radius:6px;box-shadow:0 24px 70px rgba(0,0,0,.6)}
+
   /* ============================== REVEAL ============================== */
   [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:calc(var(--i,0)*80ms)}
   [data-reveal].in{opacity:1;transform:none}
@@ -307,7 +319,7 @@
       <span class="label" data-ko="미션" data-en="Mission">Mission</span>
     </div>
     <h2 class="pull" id="mission-h" data-reveal><span data-ko="땅은 극복할 대상이 아니라, " data-en="The ground is not an obstacle. It is the ">The ground is not an obstacle. It is the </span><span class="em" data-ko="구조" data-en="structure">structure</span><span data-ko=" 그 자체다." data-en=".">.</span></h2>
-    <p class="mission-sub" data-reveal style="--i:1" data-ko="나는 토질역학과 디지털 도구가 만나는 지점에서 일한다. 땅이 어떻게 거동하는지 규명하고, 터널 시공을 더 안전하고 빠르게 만드는 모델과 방법을 만든다." data-en="I work where soil mechanics meets digital tools — characterizing how the ground behaves, then building the models and methods that make tunnelling safer and faster.">I work where soil mechanics meets digital tools — characterizing how the ground behaves, then building the models and methods that make tunnelling safer and faster.</p>
+    <p class="mission-sub" data-reveal style="--i:1" data-ko="나는 토질역학과 디지털 도구가 맞닿는 지점에서 일한다. 땅의 거동을 규명하고, 터널 시공을 더 안전하고 빠르게 만드는 모델과 방법을 만든다." data-en="I work where soil mechanics meets digital tools — characterizing how the ground behaves, then building the models and methods that make tunnelling safer and faster.">I work where soil mechanics meets digital tools — characterizing how the ground behaves, then building the models and methods that make tunnelling safer and faster.</p>
   </div>
 </section>
 
@@ -353,7 +365,7 @@
         <div class="ri-index" aria-hidden="true" data-parallax="-0.05">02</div>
         <div>
           <h3 class="ri-title" data-ko="점토–박테리아 상호작용" data-en="Clay–bacteria interaction">Clay–bacteria interaction</h3>
-          <p class="ri-desc" data-ko="카올린과 Shewanella oneidensis MR-1을 이용한 침강·압밀 시험으로, 미생물 상호작용이 퇴적물을 어떻게 치밀화하는지 규명 — 토양 정화와 퇴적물 안정화의 가능성." data-en="Sedimentation and consolidation tests with kaolin and Shewanella oneidensis MR-1, revealing how microbial interaction densifies sediments — pathways for soil remediation and sediment stabilization.">Sedimentation and consolidation tests with kaolin and Shewanella oneidensis MR-1, revealing how microbial interaction densifies sediments — pathways for soil remediation and sediment stabilization.</p>
+          <p class="ri-desc" data-ko="카올린과 Shewanella oneidensis MR-1로 침강·압밀 시험을 수행해, 미생물 상호작용이 퇴적물을 어떻게 치밀화하는지 규명하고 토양 정화와 퇴적물 안정화 가능성을 탐색했다." data-en="Sedimentation and consolidation tests with kaolin and Shewanella oneidensis MR-1, revealing how microbial interaction densifies sediments — pathways for soil remediation and sediment stabilization.">Sedimentation and consolidation tests with kaolin and Shewanella oneidensis MR-1, revealing how microbial interaction densifies sediments — pathways for soil remediation and sediment stabilization.</p>
           <span class="ri-tag" data-ko="침강 · 압밀" data-en="Sedimentation · Consolidation">Sedimentation · Consolidation</span>
         </div>
       </article>
@@ -362,7 +374,7 @@
         <div class="ri-index" aria-hidden="true" data-parallax="-0.05">03</div>
         <div>
           <h3 class="ri-title" data-ko="CO₂ 처리 순환골재" data-en="CO₂-treated recycled aggregates">CO₂-treated recycled aggregates</h3>
-          <p class="ri-desc" data-ko="탄산화 처리로 순환골재 성능을 개선 — 골재파쇄값(ACV) 30.3%까지 감소, 노상토지지력비(CBR) 137.7%까지 증가 — 하고 침출수 pH·크롬 농도를 낮춰 지속가능한 건설 재료에 기여했다." data-en="Carbonation treatment improved recycled-aggregate performance — crushing value reduced to 30.3% and CBR raised to 137.7% — while lowering leachate pH and chromium, advancing sustainable construction materials.">Carbonation treatment improved recycled-aggregate performance — crushing value reduced to 30.3% and CBR raised to 137.7% — while lowering leachate pH and chromium, advancing sustainable construction materials.</p>
+          <p class="ri-desc" data-ko="탄산화 처리로 골재파쇄값(ACV)을 30.3%까지 낮추고 노상토지지력비(CBR)를 137.7%까지 높였으며, 침출수의 pH와 크롬 농도를 낮춰 지속가능한 건설 재료에 기여했다." data-en="Carbonation treatment improved recycled-aggregate performance — crushing value reduced to 30.3% and CBR raised to 137.7% — while lowering leachate pH and chromium, advancing sustainable construction materials.">Carbonation treatment improved recycled-aggregate performance — crushing value reduced to 30.3% and CBR raised to 137.7% — while lowering leachate pH and chromium, advancing sustainable construction materials.</p>
           <span class="ri-tag" data-ko="탄산화 · 지속가능성 · 한국수자원공사" data-en="Carbonation · Sustainability · K-water">Carbonation · Sustainability · K-water</span>
         </div>
       </article>
@@ -371,7 +383,7 @@
         <div class="ri-index" aria-hidden="true" data-parallax="-0.05">04</div>
         <div>
           <h3 class="ri-title" data-ko="점토 혼합 MICP 절리암반 차수" data-en="Clay-mixed MICP for rock-mass sealing">Clay-mixed MICP for rock-mass sealing</h3>
-          <p class="ri-desc" data-ko="점토 혼합 미생물 유도 탄산칼슘 침전(MICP) 기법으로 절리암반을 차수하는 친환경 그라우팅 공법 개발 — 시멘트계 그라우트 의존을 줄인다." data-en="Developing an eco-friendly grouting method that uses clay-mixed microbially induced calcite precipitation (MICP) to seal jointed rock masses — reducing reliance on cement-based grouts.">Developing an eco-friendly grouting method that uses clay-mixed microbially induced calcite precipitation (MICP) to seal jointed rock masses — reducing reliance on cement-based grouts.</p>
+          <p class="ri-desc" data-ko="점토를 혼합한 미생물 유도 탄산칼슘 침전(MICP) 기법으로 절리 암반을 차수하는 친환경 그라우팅 공법을 개발해, 시멘트계 그라우트 의존도를 낮춘다." data-en="Developing an eco-friendly grouting method that uses clay-mixed microbially induced calcite precipitation (MICP) to seal jointed rock masses — reducing reliance on cement-based grouts.">Developing an eco-friendly grouting method that uses clay-mixed microbially induced calcite precipitation (MICP) to seal jointed rock masses — reducing reliance on cement-based grouts.</p>
           <span class="ri-tag" data-ko="MICP · 바이오그라우팅 · 한국연구재단" data-en="MICP · Bio-grouting · NRF">MICP · Bio-grouting · NRF</span>
         </div>
       </article>
@@ -393,7 +405,7 @@
         <div class="pub-year">2025<span class="pub-type" data-ko="저널 · 심사 중" data-en="Journal">Journal</span></div>
         <div>
           <p class="pub-title">Assessment of two-component backfill grouting quality for TBM tail voids via scaled physical modeling: effects of injection flow rate, hardener dosage, and water-to-cement ratio</p>
-          <p class="pub-venue" data-ko="Tunnelling and Underground Space Technology — 주저자, 심사 중" data-en="Tunnelling and Underground Space Technology — first author, under review">Tunnelling and Underground Space Technology — first author, under review</p>
+          <p class="pub-venue" data-ko="Tunnelling and Underground Space Technology · 주저자 · 심사 중" data-en="Tunnelling and Underground Space Technology — first author, under review">Tunnelling and Underground Space Technology — first author, under review</p>
         </div>
       </article>
 
@@ -401,8 +413,8 @@
         <div class="pub-year">2025<span class="pub-type" data-ko="국제 학회" data-en="Conference">Conference</span></div>
         <div>
           <p class="pub-title">Effect of injection flow rate and Component B on quality of two-component backfill grout for TBM tail voids: scaled model experiment</p>
-          <p class="pub-venue" data-ko="TRANSOILCOLD 2025 — 주저자" data-en="TRANSOILCOLD 2025 — first author">TRANSOILCOLD 2025 — first author</p>
-          <span class="pub-badge" data-ko="★ 베스트 페이퍼" data-en="★ Best Paper Award">★ Best Paper Award</span>
+          <p class="pub-venue" data-ko="TRANSOILCOLD 2025 · 주저자" data-en="TRANSOILCOLD 2025 — first author">TRANSOILCOLD 2025 — first author</p>
+          <button type="button" class="pub-badge cert-trigger" data-cert="cert-transoilcold.jpg" data-certalt="TRANSOILCOLD 2025 — Best Paper Commendation Award certificate" data-ko="★ 우수논문상" data-en="★ Best Paper Commendation Award">★ Best Paper Commendation Award</button>
         </div>
       </article>
 
@@ -410,8 +422,8 @@
         <div class="pub-year">2025<span class="pub-type" data-ko="국내 학회" data-en="Conference">Conference</span></div>
         <div>
           <p class="pub-title">Performance evaluation of two-component backfill grout for TBM tail voids via scaled model experiments</p>
-          <p class="pub-venue" data-ko="한국터널지하공간학회 춘계학술발표회 2025 — 주저자" data-en="Korean Tunnelling &amp; Underground Space Assoc., Spring 2025 — first author">Korean Tunnelling &amp; Underground Space Assoc., Spring 2025 — first author</p>
-          <span class="pub-badge" data-ko="★ 최우수논문 학회장상" data-en="★ Best Paper, President's Award">★ Best Paper, President's Award</span>
+          <p class="pub-venue" data-ko="한국터널지하공간학회 춘계학술발표회 2025 · 주저자" data-en="Korean Tunnelling &amp; Underground Space Assoc., Spring 2025 — first author">Korean Tunnelling &amp; Underground Space Assoc., Spring 2025 — first author</p>
+          <button type="button" class="pub-badge cert-trigger" data-cert="cert-kta.jpg" data-certalt="KTA 2025 — Best Paper Award certificate" data-ko="★ 최우수논문상" data-en="★ Best Paper Award">★ Best Paper Award</button>
         </div>
       </article>
 
@@ -419,7 +431,7 @@
         <div class="pub-year">2024<span class="pub-type" data-ko="국내 학회" data-en="Conference">Conference</span></div>
         <div>
           <p class="pub-title">Laboratory model study on the flow characteristics of two-component backfill grout for TBM</p>
-          <p class="pub-venue" data-ko="한국지반공학회 춘계학술발표회 2024 — 주저자" data-en="Korean Geotechnical Society, Spring 2024 — first author">Korean Geotechnical Society, Spring 2024 — first author</p>
+          <p class="pub-venue" data-ko="한국지반공학회 춘계학술발표회 2024 · 주저자" data-en="Korean Geotechnical Society, Spring 2024 — first author">Korean Geotechnical Society, Spring 2024 — first author</p>
         </div>
       </article>
 
@@ -427,7 +439,7 @@
         <div class="pub-year">2023<span class="pub-type" data-ko="국제 학회" data-en="Conference">Conference</span></div>
         <div>
           <p class="pub-title">Effect of pH on clay–bacteria interaction: a sedimentation study</p>
-          <p class="pub-venue" data-ko="제34회 KKHTCNN 토목공학 심포지엄 2023 — 주저자" data-en="34th KKHTCNN Symposium on Civil Engineering, 2023 — first author">34th KKHTCNN Symposium on Civil Engineering, 2023 — first author</p>
+          <p class="pub-venue" data-ko="제34회 KKHTCNN 토목공학 심포지엄 2023 · 주저자" data-en="34th KKHTCNN Symposium on Civil Engineering, 2023 — first author">34th KKHTCNN Symposium on Civil Engineering, 2023 — first author</p>
         </div>
       </article>
 
@@ -435,7 +447,7 @@
         <div class="pub-year">2025<span class="pub-type" data-ko="특허" data-en="Patent">Patent</span></div>
         <div>
           <p class="pub-title">System for evaluating the constructability of ground-improvement methods and its operating method</p>
-          <p class="pub-venue" data-ko="출원 KR 10-2025-0072845 — 공동발명자, 출원(심사청구)" data-en="KR application 10-2025-0072845 — co-inventor, filed (under examination)">KR application 10-2025-0072845 — co-inventor, filed (under examination)</p>
+          <p class="pub-venue" data-ko="출원 KR 10-2025-0072845 · 공동발명자 · 출원(심사청구)" data-en="KR application 10-2025-0072845 — co-inventor, filed (under examination)">KR application 10-2025-0072845 — co-inventor, filed (under examination)</p>
         </div>
       </article>
     </div>
@@ -450,30 +462,30 @@
       <span class="label" data-ko="경력 · 학력" data-en="Experience &amp; Education">Experience &amp; Education</span>
     </div>
     <h2 class="heading" id="cv-h" data-reveal style="--i:1" data-ko="지나온 지층" data-en="The strata so far">The strata so far</h2>
-    <a class="cv-link" href="cv.html" data-reveal style="--i:2" data-ko="전체 이력서 — 보기 · 인쇄 →" data-en="Full CV — view &amp; print →">Full CV — view &amp; print →</a>
+    <a class="cv-link" href="cv.html" data-reveal style="--i:2" data-ko="이력서 전체 보기 · 인쇄 →" data-en="Full CV — view &amp; print →">Full CV — view &amp; print →</a>
 
     <div class="cv-block">
       <p class="cv-group-label" data-reveal data-ko="경력" data-en="Experience">Experience</p>
       <div class="cv-row" data-reveal>
-        <span class="cv-year">2026 —</span>
+        <span class="cv-year" data-ko="2026 – 현재" data-en="2026 – present">2026 – present</span>
         <span class="cv-role"><span data-ko="GS건설 · R.I.F Tech. 연구원" data-en="Research Engineer — GS E&amp;C, R.I.F Tech.">Research Engineer — GS E&amp;C, R.I.F Tech.</span><span class="cv-note" data-ko="지반·터널 엔지니어링팀, 기반기술연구센터" data-en="Geotechnical &amp; Tunnel Engineering Team, Fundamental Technology Research Center">Geotechnical &amp; Tunnel Engineering Team, Fundamental Technology Research Center</span></span>
         <span class="cv-gpa" data-ko="서울, 대한민국" data-en="Seoul, Republic of Korea">Seoul, Republic of Korea</span>
       </div>
       <div class="cv-row" data-reveal>
         <span class="cv-year" data-ko="2025.9 – 12" data-en="SEP – DEC 2025">SEP – DEC 2025</span>
-        <span class="cv-role"><span data-ko="한국건설기술연구원(KICT) · 석사후연구원" data-en="Post-master’s Researcher — KICT">Post-master’s Researcher — KICT</span><span class="cv-note" data-ko="미래스마트건설연구본부 — 스마트시티 평가지표 산정, 디지털 트윈 기반 시설물 유지관리" data-en="Future &amp; Smart Construction Division — smart-city KPIs, digital-twin facility maintenance">Future &amp; Smart Construction Division — smart-city KPIs, digital-twin facility maintenance</span></span>
+        <span class="cv-role"><span data-ko="한국건설기술연구원(KICT) · 석사후연구원" data-en="Post-master’s Researcher — KICT">Post-master’s Researcher — KICT</span><span class="cv-note" data-ko="미래스마트건설연구본부 · 스마트시티 평가지표 산정, 디지털 트윈 기반 시설물 유지관리" data-en="Future &amp; Smart Construction Division — smart-city KPIs, digital-twin facility maintenance">Future &amp; Smart Construction Division — smart-city KPIs, digital-twin facility maintenance</span></span>
         <span class="cv-gpa" data-ko="고양, 대한민국" data-en="Goyang, Republic of Korea">Goyang, Republic of Korea</span>
       </div>
       <div class="cv-row" data-reveal>
         <span class="cv-year" data-ko="2025.4 – 8" data-en="APR – AUG 2025">APR – AUG 2025</span>
-        <span class="cv-role"><span data-ko="KAIST · 연구원" data-en="Researcher — KAIST">Researcher — KAIST</span><span class="cv-note" data-ko="지반에너지연구실 — 모형 및 실대형 실험 수행, 결과 분석" data-en="Geo-Energy Lab — model &amp; large-scale experiments, data analysis">Geo-Energy Lab — model &amp; large-scale experiments, data analysis</span></span>
+        <span class="cv-role"><span data-ko="KAIST · 연구원" data-en="Researcher — KAIST">Researcher — KAIST</span><span class="cv-note" data-ko="지반에너지연구실 · 모형·실대형 실험 수행 및 결과 분석" data-en="Geo-Energy Lab — model &amp; large-scale experiments, data analysis">Geo-Energy Lab — model &amp; large-scale experiments, data analysis</span></span>
         <span class="cv-gpa" data-ko="대전, 대한민국" data-en="Daejeon, Republic of Korea">Daejeon, Republic of Korea</span>
       </div>
 
       <p class="cv-group-label" data-reveal data-ko="학력" data-en="Education">Education</p>
       <div class="cv-row" data-reveal>
         <span class="cv-year">2023 – 2025</span>
-        <span class="cv-role"><span data-ko="KAIST · 건설및환경공학 석사" data-en="M.S. Civil &amp; Environmental Engineering — KAIST">M.S. Civil &amp; Environmental Engineering — KAIST</span><span class="cv-note" data-ko="지도교수 — 권태혁 교수 (지반에너지연구실)" data-en="Advisor — Prof. Tae-Hyuk Kwon (Geo-Energy Lab)">Advisor — Prof. Tae-Hyuk Kwon (Geo-Energy Lab)</span></span>
+        <span class="cv-role"><span data-ko="KAIST · 건설및환경공학 석사" data-en="M.S. Civil &amp; Environmental Engineering — KAIST">M.S. Civil &amp; Environmental Engineering — KAIST</span><span class="cv-note" data-ko="지도교수 권태혁 교수 (지반에너지연구실)" data-en="Advisor — Prof. Tae-Hyuk Kwon (Geo-Energy Lab)">Advisor — Prof. Tae-Hyuk Kwon (Geo-Energy Lab)</span></span>
         <span class="cv-gpa">GPA <span class="num">3.92</span>/4.3</span>
       </div>
       <div class="cv-row" data-reveal>
@@ -485,12 +497,12 @@
       <p class="cv-group-label" data-reveal data-ko="수상" data-en="Honors">Honors</p>
       <div class="cv-row" data-reveal>
         <span class="cv-year" data-ko="2025.9" data-en="SEP 2025">SEP 2025</span>
-        <span class="cv-role" data-ko="베스트 페이퍼 어워드" data-en="Best Paper Award">Best Paper Award</span>
+        <button type="button" class="cv-role cert-honor" data-cert="cert-transoilcold.jpg" data-certalt="TRANSOILCOLD 2025 — Best Paper Commendation Award certificate" data-ko="우수논문상" data-en="Best Paper Commendation Award">Best Paper Commendation Award</button>
         <span class="cv-gpa">TRANSOILCOLD 2025</span>
       </div>
       <div class="cv-row" data-reveal>
         <span class="cv-year" data-ko="2025.4" data-en="APR 2025">APR 2025</span>
-        <span class="cv-role" data-ko="최우수논문 학회장상" data-en="Best Paper, President’s Award">Best Paper, President’s Award</span>
+        <button type="button" class="cv-role cert-honor" data-cert="cert-kta.jpg" data-certalt="KTA 2025 — Best Paper Award certificate" data-ko="최우수논문상" data-en="Best Paper Award">Best Paper Award</button>
         <span class="cv-gpa" data-ko="한국터널지하공간학회" data-en="KTA">KTA</span>
       </div>
       <div class="cv-row" data-reveal>
@@ -507,7 +519,7 @@
         </div>
         <div class="cred-item">
           <div class="cred-k" data-ko="어학" data-en="Language">Language</div>
-          <div class="cred-v" data-ko="영어 — OPIc IH · 한국어 (모국어)" data-en="English — OPIc IH · Korean (native)">English — OPIc IH · Korean (native)</div>
+          <div class="cred-v" data-ko="영어 OPIc IH · 한국어(모국어)" data-en="English — OPIc IH · Korean (native)">English — OPIc IH · Korean (native)</div>
         </div>
         <div class="cred-item">
           <div class="cred-k" data-ko="도구" data-en="Tools">Tools</div>
@@ -538,7 +550,7 @@
       </div>
       <div class="meta-col">
         <div class="meta-k" data-ko="소속" data-en="Affiliation">Affiliation</div>
-        <div class="meta-v" data-ko="GS건설 · 기반기술연구센터" data-en="GS E&amp;C · Fundamental Technology Research Center">GS E&amp;C · Fundamental Technology Research Center</div>
+        <div class="meta-v" data-ko="GS건설 · 지반·터널 엔지니어링팀" data-en="GS E&amp;C · Geotechnical &amp; Tunnel Engineering Team">GS E&amp;C · Geotechnical &amp; Tunnel Engineering Team</div>
       </div>
       <div class="meta-col">
         <div class="meta-k" data-ko="링크" data-en="Elsewhere">Elsewhere</div>
@@ -553,6 +565,11 @@
   </div>
 </section>
 </main>
+
+<!-- certificate lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Award certificate">
+  <img id="lightbox-img" src="" alt="" />
+</div>
 
 <script>
 (function(){
@@ -754,6 +771,17 @@
   /* ---------------- back to top ---------------- */
   var totop = document.getElementById('totop');
   if(totop){ totop.addEventListener('click', function(){ window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'}); }); }
+
+  /* ---------------- certificate lightbox ---------------- */
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightbox-img');
+  function closeLb(){ if(lb){ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); lbImg.src=''; } }
+  var certTriggers = document.querySelectorAll('[data-cert]');
+  for(var ci=0; ci<certTriggers.length; ci++){
+    (function(t){ t.addEventListener('click', function(e){ e.preventDefault(); if(lb){ lbImg.src=t.getAttribute('data-cert'); lbImg.alt=t.getAttribute('data-certalt')||''; lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); } }); })(certTriggers[ci]);
+  }
+  if(lb){ lb.addEventListener('click', closeLb); }
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' || e.keyCode===27) closeLb(); });
 })();
 </script>
 <!-- GoatCounter — privacy-friendly, cookieless analytics -->
