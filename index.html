@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="ko" data-lang="ko">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>김현준 · Hyun-Jun Kim — Geotechnical / Tunnel Engineer</title>
+<title>Hyun-Jun Kim · 김현준 — Geotechnical / Tunnel Engineer</title>
 <meta name="description" content="Hyun-Jun Kim (김현준) — Geotechnical & Tunnel Engineer, TBM specialist. Bridging traditional geotechnics with smart construction." />
 <meta name="author" content="Hyun-Jun Kim" />
 <meta name="color-scheme" content="light" />
 
-<!-- Open Graph -->
-<meta property="og:title" content="김현준 · Hyun-Jun Kim — Geotechnical / Tunnel Engineer" />
+<meta property="og:title" content="Hyun-Jun Kim · 김현준 — Geotechnical / Tunnel Engineer" />
 <meta property="og:description" content="Bridging traditional geotechnics with smart construction — for safer, more efficient underground space." />
 <meta property="og:type" content="profile" />
 
@@ -22,109 +21,52 @@
 <style>
   /* ============================== TOKENS ============================== */
   :root{
-    --bg:#F7F8F9;
-    --surface:#FFFFFF;
-    --text:#0E141B;
-    --muted:#6A737C;
-    --accent:#C8511B;
-    --hairline:#D8DDE2;
-    --watermark:#EEF1F3;
-
+    --bg:#F7F8F9; --surface:#FFFFFF; --text:#0E141B; --muted:#6A737C;
+    --accent:#C8511B; --hairline:#D8DDE2; --watermark:#EEF1F3;
     --sans:'Inter','Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic',sans-serif;
     --kr:'Pretendard',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
     --mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
-
-    --nav-h:64px;
-    --maxw:1120px;
-    --pad-x:clamp(24px,6vw,80px);
-    --ease:cubic-bezier(.22,1,.36,1);
+    --nav-h:64px; --maxw:1120px; --pad-x:clamp(24px,6vw,80px); --ease:cubic-bezier(.22,1,.36,1);
   }
   [data-theme="dark"]{
-    --bg:#0A0C0F;
-    --surface:#11161C;
-    --text:#E9EEF2;
-    --muted:#7E8A95;
-    --accent:#C8511B;
-    --hairline:#232C36;
-    --watermark:#11161C;
+    --bg:#0A0C0F; --surface:#11161C; --text:#E9EEF2; --muted:#7E8A95;
+    --accent:#C8511B; --hairline:#232C36; --watermark:#11161C;
   }
 
   /* ============================== RESET ============================== */
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{
-    font-family:var(--sans);
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.65;
-    -webkit-font-smoothing:antialiased;
-    text-rendering:optimizeLegibility;
-    overflow-x:hidden;
-  }
+  body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
   ::selection{background:var(--accent);color:#fff}
   a{color:inherit;text-decoration:none}
   img,svg,canvas{display:block;max-width:100%}
-
-  /* skip link */
   .skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#fff;padding:10px 16px;z-index:1000;border-radius:0 0 6px 0;font-family:var(--mono);font-size:13px}
   .skip:focus{left:0}
-
   :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:1px}
 
   /* ============================== LANG SWAP ============================== */
   [data-ko][data-en]{transition:opacity .15s ease}
   .swapping{opacity:0 !important}
-  html[data-lang="ko"] .lat-only{display:none}
-  html[data-lang="en"] .kr-only{display:none}
-
-  /* mono Latin label that becomes natural Korean when KO active */
-  .label{
-    font-family:var(--mono);
-    text-transform:uppercase;
-    letter-spacing:.16em;
-    font-size:12px;
-    font-weight:500;
-    color:var(--muted);
-  }
-  html[data-lang="ko"] .label{
-    font-family:var(--kr);
-    text-transform:none;
-    letter-spacing:.02em;
-    font-size:13px;
-  }
+  .label{font-family:var(--mono);text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:500;color:var(--muted)}
+  html[data-lang="ko"] .label{font-family:var(--kr);text-transform:none;letter-spacing:.02em;font-size:13px}
 
   /* ============================== NAV ============================== */
-  .nav{
-    position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:100;
-    display:flex;align-items:center;justify-content:space-between;
-    padding:0 var(--pad-x);
-    --nav-fg:#E9EEF2;
-    color:var(--nav-fg);
-    transition:background .24s ease,border-color .24s ease,backdrop-filter .24s ease;
-    border-bottom:1px solid transparent;
-  }
+  .nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad-x);--nav-fg:#E9EEF2;color:var(--nav-fg);transition:background .24s ease,border-color .24s ease,backdrop-filter .24s ease;border-bottom:1px solid transparent}
   .nav[data-theme="light"]{--nav-fg:#0E141B}
   .nav[data-theme="dark"]{--nav-fg:#E9EEF2}
   .nav.scrolled{backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%)}
   .nav.scrolled[data-theme="light"]{background:rgba(247,248,249,.72);border-bottom-color:rgba(14,20,27,.08)}
   .nav.scrolled[data-theme="dark"]{background:rgba(10,12,15,.62);border-bottom-color:rgba(233,238,242,.08)}
-
-  .brand{font-weight:600;font-size:15px;letter-spacing:-.01em;color:var(--nav-fg)}
-  html[data-lang="en"] .brand{letter-spacing:.02em;font-size:14px}
-
-  .nav-links{display:flex;gap:clamp(16px,2.4vw,34px);align-items:center}
-  .nav-link{
-    position:relative;font-size:13.5px;color:var(--nav-fg);opacity:.72;
-    font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;
-    transition:opacity .2s ease;padding:4px 0;
-  }
+  .brand{font-weight:600;font-size:14px;letter-spacing:.02em;color:var(--nav-fg)}
+  html[data-lang="ko"] .brand{letter-spacing:-.01em;font-size:15px}
+  .nav-links{display:flex;gap:clamp(14px,2vw,30px);align-items:center}
+  .nav-link{position:relative;font-size:13px;color:var(--nav-fg);opacity:.72;font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;transition:opacity .2s ease;padding:4px 0}
   html[data-lang="ko"] .nav-link{font-family:var(--kr);text-transform:none;letter-spacing:.01em;font-size:14.5px}
   .nav-link:hover{opacity:1}
   .nav-link::after{content:'';position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--accent);transition:width .28s var(--ease)}
   .nav-link.active{opacity:1}
   .nav-link.active::after{width:100%}
-  @media(max-width:680px){.nav-links{display:none}}
-
+  @media(max-width:820px){.nav-links{display:none}}
   .lang{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:13px;font-weight:500}
   .lang-btn{background:none;border:0;cursor:pointer;color:var(--nav-fg);opacity:.6;transition:opacity .18s ease;letter-spacing:.06em;padding:4px 2px;font-family:inherit;font-size:inherit}
   .lang-btn.active{opacity:1}
@@ -135,164 +77,117 @@
   .wrap{max-width:var(--maxw);margin:0 auto;padding:clamp(96px,15vh,184px) var(--pad-x)}
   .eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:clamp(28px,5vh,56px)}
   .eyebrow .tick{width:38px;height:1px;background:var(--accent);flex:none}
-
-  h2.heading{
-    font-weight:600;letter-spacing:-.02em;line-height:1.05;
-    font-size:clamp(30px,4.4vw,52px);
-  }
+  h2.heading{font-weight:600;letter-spacing:-.02em;line-height:1.05;font-size:clamp(30px,4.4vw,52px)}
   html[data-lang="ko"] h2.heading{letter-spacing:-.01em}
-
   .muted{color:var(--muted)}
 
   /* ============================== HERO ============================== */
-  .hero{
-    position:relative;min-height:100svh;display:flex;align-items:flex-end;
-    background:#0A0C0F;color:#E9EEF2;overflow:hidden;isolation:isolate;
-    background-image:radial-gradient(120% 90% at 50% 42%, #16202B 0%, #0E141B 38%, #0A0C0F 78%);
-  }
+  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;background:#0A0C0F;color:#E9EEF2;overflow:hidden;isolation:isolate;background-image:radial-gradient(120% 90% at 50% 42%, #16202B 0%, #0E141B 38%, #0A0C0F 78%)}
   .hero .dust{position:absolute;inset:0;z-index:1;pointer-events:none}
   .hero .bore-wrap{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;pointer-events:none}
-  #bore{
-    width:clamp(560px,92vmin,1120px);height:auto;opacity:.92;
-    transform-origin:50% 42%;will-change:transform;
-  }
+  #bore{width:clamp(560px,92vmin,1120px);height:auto;opacity:.92;transform-origin:50% 42%;will-change:transform}
   #bore circle, #bore line{vector-effect:non-scaling-stroke}
-  .hero-flash{
-    position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;
-    transform-origin:50% 42%;
-    background:radial-gradient(circle at 50% 42%, #F7F8F9 0%, rgba(247,248,249,.9) 26%, rgba(247,248,249,0) 62%);
-  }
-  .hero-inner{
-    position:relative;z-index:4;width:100%;max-width:var(--maxw);
-    margin:0 auto;padding:0 var(--pad-x) clamp(72px,12vh,120px);
-    will-change:opacity;
-  }
-  .hero-kicker{
-    font-family:var(--mono);text-transform:uppercase;letter-spacing:.22em;
-    font-size:clamp(11px,1.1vw,13px);color:#9DA8B2;margin-bottom:22px;font-weight:500;
-    display:flex;align-items:center;gap:13px;
-  }
+  .hero-flash{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;transform-origin:50% 42%;background:radial-gradient(circle at 50% 42%, #F7F8F9 0%, rgba(247,248,249,.9) 26%, rgba(247,248,249,0) 62%)}
+  .hero-inner{position:relative;z-index:4;width:100%;max-width:var(--maxw);margin:0 auto;padding:0 var(--pad-x) clamp(72px,12vh,120px);will-change:opacity}
+  .hero-inner::before{content:'';position:absolute;left:0;right:0;bottom:0;top:-40%;background:linear-gradient(to top,rgba(10,12,15,.92),rgba(10,12,15,.55) 38%,rgba(10,12,15,0) 78%);z-index:-1;pointer-events:none}
+  .hero-kicker{font-family:var(--mono);text-transform:uppercase;letter-spacing:.22em;font-size:clamp(11px,1.1vw,13px);color:#9DA8B2;margin-bottom:22px;font-weight:500;display:flex;align-items:center;gap:13px}
   html[data-lang="ko"] .hero-kicker{font-family:var(--kr);text-transform:none;letter-spacing:.04em;font-size:clamp(13px,1.3vw,15px)}
-  .hero-kicker .tick{width:40px;height:1px;background:var(--accent);flex:none}
-  h1.name{
-    font-weight:600;line-height:.98;letter-spacing:-.03em;
-    font-size:clamp(48px,9vw,132px);color:#F4F7F9;
-  }
-  html[data-lang="ko"] h1.name{letter-spacing:-.01em;font-weight:600}
-  .hero-mission{
-    margin-top:clamp(22px,3.4vh,34px);max-width:30ch;
-    font-size:clamp(16px,1.7vw,21px);line-height:1.5;color:#B9C2CB;font-weight:400;
-  }
-  .scroll-cue{
-    margin-top:clamp(34px,5vh,56px);display:inline-flex;flex-direction:column;align-items:flex-start;gap:10px;
-    font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#7E8A95;
-  }
+  h1.name{font-weight:600;line-height:.98;letter-spacing:-.03em;font-size:clamp(48px,9vw,132px);color:#F4F7F9}
+  html[data-lang="ko"] h1.name{letter-spacing:-.01em}
+  .hero-mission{margin-top:clamp(22px,3.4vh,34px);max-width:34ch;font-size:clamp(16px,1.7vw,21px);line-height:1.5;color:#B9C2CB;font-weight:400}
+  .scroll-cue{margin-top:clamp(34px,5vh,56px);display:inline-flex;flex-direction:column;align-items:flex-start;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#7E8A95}
   html[data-lang="ko"] .scroll-cue{font-family:var(--kr);text-transform:none;letter-spacing:.05em;font-size:12px}
   .chev{width:16px;height:16px;border-right:1.4px solid #7E8A95;border-bottom:1.4px solid #7E8A95;transform:rotate(45deg);animation:bob 1.9s var(--ease) infinite}
   @keyframes bob{0%,100%{transform:translateY(0) rotate(45deg);opacity:.5}50%{transform:translateY(6px) rotate(45deg);opacity:1}}
-  .readout{
-    position:absolute;right:var(--pad-x);bottom:clamp(22px,4vh,40px);z-index:4;
-    font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:#7E8A95;text-align:right;
-  }
+  .readout{position:absolute;right:var(--pad-x);bottom:clamp(22px,4vh,40px);z-index:4;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:#7E8A95;text-align:right}
   @media(max-width:680px){.readout{display:none}}
-  .hero-inner::before{content:'';position:absolute;left:0;right:0;bottom:0;top:-40%;background:linear-gradient(to top,rgba(10,12,15,.92),rgba(10,12,15,.55) 38%,rgba(10,12,15,0) 78%);z-index:-1;pointer-events:none}
-  @media(max-width:480px){
-    #bore{width:clamp(360px,118vmin,560px)}
-    .bore-wrap{align-items:flex-start;padding-top:7vh}
-  }
+  @media(max-width:480px){#bore{width:clamp(360px,118vmin,560px)} .bore-wrap{align-items:flex-start;padding-top:7vh}}
 
   /* ============================== MISSION ============================== */
   #mission .wrap{padding-top:clamp(120px,18vh,220px);padding-bottom:clamp(80px,12vh,140px)}
-  .pull{
-    font-weight:600;letter-spacing:-.025em;line-height:1.08;
-    font-size:clamp(34px,6vw,80px);max-width:16ch;
-  }
+  .pull{font-weight:600;letter-spacing:-.025em;line-height:1.08;font-size:clamp(34px,6vw,80px);max-width:17ch}
   html[data-lang="ko"] .pull{letter-spacing:-.01em;line-height:1.18;max-width:18ch}
   .pull .em{color:var(--accent)}
-  .mission-sub{margin-top:clamp(34px,5vh,52px);max-width:54ch;font-size:clamp(16px,1.5vw,19px);color:var(--muted);line-height:1.7}
+  .mission-sub{margin-top:clamp(34px,5vh,52px);max-width:56ch;font-size:clamp(16px,1.5vw,19px);color:var(--muted);line-height:1.7}
 
   /* ============================== FOCUS ============================== */
-  .focus-grid{
-    display:grid;grid-template-columns:repeat(2,1fr);gap:0;
-    border-top:1px solid var(--hairline);
-  }
+  .focus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--hairline)}
   @media(max-width:680px){.focus-grid{grid-template-columns:1fr}}
-  .focus-item{
-    display:flex;align-items:baseline;gap:18px;padding:clamp(20px,3vh,30px) 4px;
-    border-bottom:1px solid var(--hairline);
-  }
+  .focus-item{display:flex;align-items:baseline;gap:18px;padding:clamp(20px,3vh,30px) 4px;border-bottom:1px solid var(--hairline)}
   .focus-item .fi-num{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.05em;flex:none;width:30px}
   .focus-item .fi-name{font-size:clamp(19px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
   @media(min-width:681px){.focus-item:nth-child(odd){padding-right:clamp(24px,4vw,56px)}.focus-item:nth-child(even){padding-left:clamp(24px,4vw,56px);border-left:1px solid var(--hairline)}}
 
   /* ============================== RESEARCH ============================== */
   .research-list{margin-top:clamp(20px,3vh,40px)}
-  .research-item{
-    position:relative;border-top:1px solid var(--hairline);
-    display:grid;grid-template-columns:minmax(110px,160px) 1fr;gap:clamp(20px,4vw,56px);
-    padding:clamp(34px,5vh,56px) 0;
-  }
+  .research-item{position:relative;border-top:1px solid var(--hairline);display:grid;grid-template-columns:minmax(96px,140px) 1fr;gap:clamp(20px,4vw,56px);padding:clamp(34px,5vh,56px) 0}
   @media(max-width:680px){.research-item{grid-template-columns:1fr;gap:14px;padding:30px 0}}
   .research-item::after{content:'';position:absolute;top:-1px;left:0;height:1px;width:0;background:var(--accent);transition:width .35s var(--ease)}
   .research-item:hover::after{width:100%}
-  .ri-index{font-family:var(--mono);font-size:clamp(38px,5vw,62px);font-weight:400;color:var(--hairline);line-height:1;transition:color .35s var(--ease);letter-spacing:-.02em}
+  .ri-index{font-family:var(--mono);font-size:clamp(34px,5vw,58px);font-weight:400;color:var(--hairline);line-height:1;transition:color .35s var(--ease);letter-spacing:-.02em}
   .research-item:hover .ri-index{color:var(--accent)}
-  .ri-title{font-size:clamp(21px,2.6vw,32px);font-weight:600;letter-spacing:-.015em;line-height:1.18}
+  .ri-title{font-size:clamp(20px,2.5vw,30px);font-weight:600;letter-spacing:-.015em;line-height:1.18}
   html[data-lang="ko"] .ri-title{letter-spacing:-.005em}
-  .ri-desc{margin-top:14px;color:var(--muted);font-size:clamp(15px,1.5vw,18px);max-width:60ch;line-height:1.7}
-  .ri-tag{
-    margin-top:20px;display:inline-block;font-family:var(--mono);font-size:11.5px;
-    letter-spacing:.14em;text-transform:uppercase;color:var(--text);
-    border:1px solid var(--hairline);padding:6px 12px;border-radius:100px;
-  }
+  .ri-desc{margin-top:14px;color:var(--muted);font-size:clamp(15px,1.5vw,18px);max-width:62ch;line-height:1.7}
+  .ri-tag{margin-top:20px;display:inline-block;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--text);border:1px solid var(--hairline);padding:6px 12px;border-radius:100px}
   html[data-lang="ko"] .ri-tag{font-family:var(--kr);text-transform:none;letter-spacing:.02em;font-size:13px}
+  .dl{display:inline-flex;align-items:center;gap:8px;margin-top:20px;margin-left:14px;font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--text);position:relative}
+  html[data-lang="ko"] .dl{font-family:var(--kr);text-transform:none;letter-spacing:.02em;font-size:14px}
+  .dl::after{content:'';position:absolute;left:0;bottom:-4px;height:1px;width:100%;background:var(--hairline);transition:background .3s}
+  .dl:hover::after{background:var(--accent)}
+  .dl .ar{color:var(--accent);font-style:normal}
+  @media(max-width:680px){.dl{margin-left:0;display:flex}}
 
-  /* ============================== CV (dark interlude) ============================== */
-  #cv{}
+  /* ============================== PUBLICATIONS (dark) ============================== */
+  .pub-list{margin-top:clamp(20px,3vh,40px)}
+  .pub-item{position:relative;border-top:1px solid var(--hairline);display:grid;grid-template-columns:128px 1fr;gap:clamp(14px,3vw,44px);padding:clamp(22px,3.2vh,32px) 0}
+  @media(max-width:680px){.pub-item{grid-template-columns:1fr;gap:8px}}
+  .pub-item::after{content:'';position:absolute;top:-1px;left:0;height:1px;width:0;background:var(--accent);transition:width .35s var(--ease)}
+  .pub-item:hover::after{width:100%}
+  .pub-year{font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--muted);font-variant-numeric:tabular-nums}
+  .pub-type{display:block;margin-top:6px;color:var(--accent);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+  html[data-lang="ko"] .pub-type{font-family:var(--kr);text-transform:none;letter-spacing:.02em;font-size:12.5px}
+  .pub-title{font-size:clamp(16px,1.7vw,19px);font-weight:500;line-height:1.42;letter-spacing:-.005em}
+  .pub-venue{margin-top:9px;font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;color:var(--muted)}
+  html[data-lang="ko"] .pub-venue{font-family:var(--kr);letter-spacing:.01em;font-size:13.5px}
+  .pub-badge{display:inline-block;margin-top:13px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:100px;padding:4px 11px}
+  html[data-lang="ko"] .pub-badge{font-family:var(--kr);text-transform:none;letter-spacing:.02em;font-size:12.5px}
+
+  /* ============================== CV ============================== */
   .cv-block{margin-top:clamp(24px,4vh,44px)}
-  .cv-group-label{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:clamp(26px,4vh,40px) 0 6px}
+  .cv-group-label{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:clamp(30px,5vh,48px) 0 6px}
   html[data-lang="ko"] .cv-group-label{font-family:var(--kr);text-transform:none;letter-spacing:.04em;font-size:13px}
-  .cv-row{
-    display:grid;grid-template-columns:170px 1fr auto;gap:clamp(16px,3vw,40px);align-items:baseline;
-    padding:clamp(16px,2.4vh,24px) 0;border-top:1px solid var(--hairline);position:relative;
-  }
+  .cv-row{display:grid;grid-template-columns:170px 1fr auto;gap:clamp(16px,3vw,40px);align-items:baseline;padding:clamp(16px,2.4vh,24px) 0;border-top:1px solid var(--hairline);position:relative}
   .cv-row::before{content:'';position:absolute;left:0;top:-1px;width:18px;height:1px;background:var(--accent)}
   @media(max-width:680px){.cv-row{grid-template-columns:1fr;gap:4px}.cv-row .cv-gpa{justify-self:start;margin-top:6px}}
   .cv-year{font-family:var(--mono);font-size:14px;color:var(--muted);letter-spacing:.04em;font-variant-numeric:tabular-nums}
   .cv-role{font-size:clamp(16px,1.8vw,21px);font-weight:500;letter-spacing:-.01em}
+  .cv-note{display:block;margin-top:6px;font-size:13.5px;color:var(--muted);font-weight:400;letter-spacing:0;line-height:1.5}
   .cv-gpa{font-family:var(--mono);font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
   .cv-gpa .num{color:var(--text)}
+  .cred-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:clamp(16px,2.5vw,32px);margin-top:10px}
+  .cred-item{border-top:1px solid var(--hairline);padding-top:14px}
+  .cred-k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+  html[data-lang="ko"] .cred-k{font-family:var(--kr);text-transform:none;letter-spacing:.02em;font-size:12.5px}
+  .cred-v{font-size:15.5px;line-height:1.55}
 
   /* ============================== CONTACT ============================== */
-  #contact{--bg:#11161C;border-top:1px solid rgba(255,255,255,.05)}
   #contact .wrap{padding-bottom:clamp(60px,9vh,96px)}
   .contact-line{font-weight:600;letter-spacing:-.025em;line-height:1.1;font-size:clamp(30px,5vw,64px);max-width:16ch}
   html[data-lang="ko"] .contact-line{letter-spacing:-.01em;line-height:1.22}
   .mail-wrap{margin-top:clamp(40px,6vh,72px)}
-  .mail{
-    position:relative;display:inline-block;font-family:var(--mono);
-    font-size:clamp(20px,3.4vw,40px);font-weight:400;letter-spacing:-.01em;color:var(--text);cursor:pointer;
-  }
+  .mail{position:relative;display:inline-block;font-family:var(--mono);font-size:clamp(20px,3.4vw,40px);font-weight:400;letter-spacing:-.01em;color:var(--text);cursor:pointer}
   .mail::after{content:'';position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--accent);transition:width .3s var(--ease)}
   .mail:hover::after{width:100%}
   .copy-label{margin-left:14px;font-family:var(--mono);font-size:13px;letter-spacing:.1em;color:var(--text);text-transform:uppercase;vertical-align:middle}
-  .contact-meta{
-    margin-top:clamp(48px,8vh,90px);display:flex;flex-wrap:wrap;gap:clamp(20px,4vw,64px);
-    padding-top:clamp(24px,4vh,36px);border-top:1px solid var(--hairline);
-  }
+  .contact-meta{margin-top:clamp(48px,8vh,90px);display:flex;flex-wrap:wrap;gap:clamp(20px,4vw,64px);padding-top:clamp(24px,4vh,36px);border-top:1px solid var(--hairline)}
   .meta-col .meta-k{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
   html[data-lang="ko"] .meta-col .meta-k{font-family:var(--kr);text-transform:none;letter-spacing:.04em;font-size:12px}
   .meta-col .meta-v{font-size:15px}
   .meta-col a.meta-v{position:relative}
   .meta-col a.meta-v::after{content:'';position:absolute;left:0;bottom:-3px;height:1px;width:0;background:var(--accent);transition:width .28s var(--ease)}
   .meta-col a.meta-v:hover::after{width:100%}
-
-  .colophon{
-    max-width:var(--maxw);margin:0 auto;padding:clamp(28px,4vh,40px) var(--pad-x);
-    display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;
-    border-top:1px solid var(--hairline);
-    font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);
-  }
+  .colophon{max-width:var(--maxw);margin:0 auto;padding:clamp(28px,4vh,40px) var(--pad-x);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-top:1px solid var(--hairline);font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted)}
   html[data-lang="ko"] .colophon .totop{font-family:var(--kr);letter-spacing:.02em;font-size:13px}
   .totop{cursor:pointer;transition:color .2s ease}
   .totop:hover{color:var(--accent)}
@@ -300,7 +195,6 @@
   /* ============================== REVEAL ============================== */
   [data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease);transition-delay:calc(var(--i,0)*80ms)}
   [data-reveal].in{opacity:1;transform:none}
-
   @media(prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     [data-reveal]{opacity:1;transform:none;transition:none}
@@ -310,33 +204,32 @@
 </style>
 </head>
 <body>
-<a class="skip" href="#hero" data-ko="본문으로 건너뛰기" data-en="Skip to content">본문으로 건너뛰기</a>
+<a class="skip" href="#hero" data-ko="본문으로 건너뛰기" data-en="Skip to content">Skip to content</a>
 
 <!-- ============================== NAV ============================== -->
 <nav class="nav" data-theme="dark" aria-label="Primary">
-  <a class="brand" href="#hero" data-ko="김현준" data-en="Hyun-Jun Kim">김현준</a>
+  <a class="brand" href="#hero" data-ko="김현준" data-en="Hyun-Jun Kim">Hyun-Jun Kim</a>
   <div class="nav-links">
-    <a class="nav-link" href="#mission" data-ko="미션" data-en="Mission">미션</a>
-    <a class="nav-link" href="#focus" data-ko="집중 분야" data-en="Focus">집중 분야</a>
-    <a class="nav-link" href="#research" data-ko="연구" data-en="Research">연구</a>
-    <a class="nav-link" href="#cv" data-ko="경력" data-en="Experience">경력</a>
-    <a class="nav-link" href="#contact" data-ko="연락처" data-en="Contact">연락처</a>
+    <a class="nav-link" href="#mission" data-ko="미션" data-en="Mission">Mission</a>
+    <a class="nav-link" href="#focus" data-ko="집중 분야" data-en="Focus">Focus</a>
+    <a class="nav-link" href="#research" data-ko="연구" data-en="Research">Research</a>
+    <a class="nav-link" href="#publications" data-ko="논문" data-en="Papers">Papers</a>
+    <a class="nav-link" href="#cv" data-ko="경력" data-en="Experience">Experience</a>
+    <a class="nav-link" href="#contact" data-ko="연락처" data-en="Contact">Contact</a>
   </div>
   <div class="lang" role="group" aria-label="Language">
-    <button class="lang-btn" type="button" data-lang="ko" aria-pressed="true">KO</button>
+    <button class="lang-btn" type="button" data-lang="ko" aria-pressed="false">KO</button>
     <span class="lang-sep" aria-hidden="true">/</span>
-    <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+    <button class="lang-btn" type="button" data-lang="en" aria-pressed="true">EN</button>
   </div>
 </nav>
 
 <!-- ============================== HERO ============================== -->
 <header class="hero section" id="hero" data-theme="dark" tabindex="-1">
   <canvas class="dust" aria-hidden="true"></canvas>
-
   <div class="bore-wrap" aria-hidden="true">
     <svg id="bore" viewBox="0 0 1000 1000">
       <g id="bore-rings">
-        <!-- outer -> inner ; opacity .10 -> .55 ; the 4th (r=259) is the accent cutterhead ring -->
         <circle cx="500" cy="420" r="470" fill="none" stroke="#E9EEF2" stroke-width="1"    style="opacity:.10"/>
         <circle cx="500" cy="420" r="388" fill="none" stroke="#E9EEF2" stroke-width="0.95" style="opacity:.14"/>
         <circle cx="500" cy="420" r="318" fill="none" stroke="#E9EEF2" stroke-width="0.9"  style="opacity:.18"/>
@@ -350,7 +243,6 @@
         <circle cx="500" cy="420" r="44"  fill="none" stroke="#E9EEF2" stroke-width="0.6"  style="opacity:.55"/>
       </g>
       <g id="bore-spokes" stroke="#E9EEF2" stroke-width="0.75" style="opacity:.14">
-        <!-- 6 cutterhead arms from inner ring (r=44) to ring 2 (r=388), every 60deg about (500,420) -->
         <line x1="544" y1="420"   x2="888" y2="420"/>
         <line x1="522" y1="458.1" x2="694" y2="755.9"/>
         <line x1="478" y1="458.1" x2="306" y2="755.9"/>
@@ -360,19 +252,16 @@
       </g>
     </svg>
   </div>
-
   <div class="hero-flash" aria-hidden="true"></div>
-
   <div class="hero-inner">
-    <p class="hero-kicker" data-ko="지반공학 · 터널 · TBM" data-en="GEOTECHNICAL · TUNNEL · TBM SPECIALIST">지반공학 · 터널 · TBM</p>
-    <h1 class="name" data-ko="김현준" data-en="Hyun-Jun Kim">김현준</h1>
-    <p class="hero-mission" data-ko="전통 지반공학과 스마트 건설 기술을 잇다. 더 안전하고 효율적인 지하 공간을 위해." data-en="Bridging traditional geotechnics with smart construction — for safer, more efficient underground space.">전통 지반공학과 스마트 건설 기술을 잇다. 더 안전하고 효율적인 지하 공간을 위해.</p>
+    <p class="hero-kicker" data-ko="지반공학 · 터널 · TBM" data-en="GEOTECHNICAL · TUNNEL · TBM SPECIALIST">GEOTECHNICAL · TUNNEL · TBM SPECIALIST</p>
+    <h1 class="name" data-ko="김현준" data-en="Hyun-Jun Kim">Hyun-Jun Kim</h1>
+    <p class="hero-mission" data-ko="전통 지반공학과 스마트 건설 기술을 잇다. 더 안전하고 효율적인 지하 공간을 위해." data-en="Bridging traditional geotechnics with smart construction — for safer, more efficient underground space.">Bridging traditional geotechnics with smart construction — for safer, more efficient underground space.</p>
     <a class="scroll-cue" href="#mission">
-      <span data-ko="스크롤" data-en="SCROLL">스크롤</span>
+      <span data-ko="스크롤" data-en="SCROLL">SCROLL</span>
       <span class="chev" aria-hidden="true"></span>
     </a>
   </div>
-
   <div class="readout" aria-hidden="true">BORE Ø 8.06 m · DEPTH −42.0 m<br>37.5665°N 126.9780°E</div>
 </header>
 
@@ -382,10 +271,10 @@
   <div class="wrap">
     <div class="eyebrow" data-reveal>
       <span class="tick" aria-hidden="true"></span>
-      <span class="label" data-ko="미션" data-en="Mission">미션</span>
+      <span class="label" data-ko="미션" data-en="Mission">Mission</span>
     </div>
-    <h2 class="pull" id="mission-h" data-reveal><span data-ko="땅은 극복할 대상이 아니라, " data-en="The ground is not an obstacle. It is the ">땅은 극복할 대상이 아니라, </span><span class="em" data-ko="구조" data-en="structure">구조</span><span data-ko=" 그 자체다." data-en=".">&nbsp;그 자체다.</span></h2>
-    <p class="mission-sub" data-reveal style="--i:1" data-ko="나는 토질역학과 디지털 도구가 만나는 지점에서 일한다. 땅이 어떻게 거동하는지 규명하고, 터널 시공을 더 안전하고 빠르게 만드는 모델과 방법을 만든다." data-en="I work where soil mechanics meets digital tools — characterizing how the ground behaves, then building the models and methods that make tunnelling safer and faster.">나는 토질역학과 디지털 도구가 만나는 지점에서 일한다. 땅이 어떻게 거동하는지 규명하고, 터널 시공을 더 안전하고 빠르게 만드는 모델과 방법을 만든다.</p>
+    <h2 class="pull" id="mission-h" data-reveal><span data-ko="땅은 극복할 대상이 아니라, " data-en="The ground is not an obstacle. It is the ">The ground is not an obstacle. It is the </span><span class="em" data-ko="구조" data-en="structure">structure</span><span data-ko=" 그 자체다." data-en=".">.</span></h2>
+    <p class="mission-sub" data-reveal style="--i:1" data-ko="나는 토질역학과 디지털 도구가 만나는 지점에서 일한다. 땅이 어떻게 거동하는지 규명하고, 터널 시공을 더 안전하고 빠르게 만드는 모델과 방법을 만든다." data-en="I work where soil mechanics meets digital tools — characterizing how the ground behaves, then building the models and methods that make tunnelling safer and faster.">I work where soil mechanics meets digital tools — characterizing how the ground behaves, then building the models and methods that make tunnelling safer and faster.</p>
   </div>
 </section>
 
@@ -394,16 +283,16 @@
   <div class="wrap">
     <div class="eyebrow" data-reveal>
       <span class="tick" aria-hidden="true"></span>
-      <span class="label" data-ko="집중 분야" data-en="Focus">집중 분야</span>
+      <span class="label" data-ko="집중 분야" data-en="Focus">Focus</span>
     </div>
-    <h2 class="heading" id="focus-h" data-reveal style="--i:1" data-ko="내가 다루는 것" data-en="What I work on">내가 다루는 것</h2>
+    <h2 class="heading" id="focus-h" data-reveal style="--i:1" data-ko="내가 다루는 것" data-en="What I work on">What I work on</h2>
     <div class="focus-grid" data-reveal style="--i:2">
-      <div class="focus-item"><span class="fi-num">01</span><span class="fi-name" data-ko="지하 공간" data-en="Underground Space">지하 공간</span></div>
-      <div class="focus-item"><span class="fi-num">02</span><span class="fi-name" data-ko="TBM · 쉴드 터널" data-en="TBM &amp; Shield Tunnelling">TBM · 쉴드 터널</span></div>
-      <div class="focus-item"><span class="fi-num">03</span><span class="fi-name" data-ko="지반공학" data-en="Geotechnical Engineering">지반공학</span></div>
-      <div class="focus-item"><span class="fi-num">04</span><span class="fi-name" data-ko="스마트 건설" data-en="Smart Construction">스마트 건설</span></div>
-      <div class="focus-item"><span class="fi-num">05</span><span class="fi-name" data-ko="디지털 트윈" data-en="Digital Twin">디지털 트윈</span></div>
-      <div class="focus-item"><span class="fi-num">06</span><span class="fi-name" data-ko="지속가능성" data-en="Sustainability">지속가능성</span></div>
+      <div class="focus-item"><span class="fi-num">01</span><span class="fi-name" data-ko="지하 공간" data-en="Underground Space">Underground Space</span></div>
+      <div class="focus-item"><span class="fi-num">02</span><span class="fi-name" data-ko="TBM · 쉴드 터널" data-en="TBM &amp; Shield Tunnelling">TBM &amp; Shield Tunnelling</span></div>
+      <div class="focus-item"><span class="fi-num">03</span><span class="fi-name" data-ko="지반공학" data-en="Geotechnical Engineering">Geotechnical Engineering</span></div>
+      <div class="focus-item"><span class="fi-num">04</span><span class="fi-name" data-ko="스마트 건설" data-en="Smart Construction">Smart Construction</span></div>
+      <div class="focus-item"><span class="fi-num">05</span><span class="fi-name" data-ko="디지털 트윈" data-en="Digital Twin">Digital Twin</span></div>
+      <div class="focus-item"><span class="fi-num">06</span><span class="fi-name" data-ko="지속가능성" data-en="Sustainability">Sustainability</span></div>
     </div>
   </div>
 </section>
@@ -413,78 +302,183 @@
   <div class="wrap">
     <div class="eyebrow" data-reveal>
       <span class="tick" aria-hidden="true"></span>
-      <span class="label" data-ko="연구" data-en="Research">연구</span>
+      <span class="label" data-ko="연구" data-en="Research">Research</span>
     </div>
-    <h2 class="heading" id="research-h" data-reveal style="--i:1" data-ko="주요 연구" data-en="Selected research">주요 연구</h2>
+    <h2 class="heading" id="research-h" data-reveal style="--i:1" data-ko="주요 연구" data-en="Selected research">Selected research</h2>
 
     <div class="research-list">
       <article class="research-item" data-reveal>
         <div class="ri-index" aria-hidden="true">01</div>
         <div>
-          <h3 class="ri-title" data-ko="TBM 테일 보이드용 이성분 뒤채움재" data-en="Two-component backfill for the TBM tail void">TBM 테일 보이드용 이성분 뒤채움재</h3>
-          <p class="ri-desc" data-ko="모형 실험으로 재료 물성과 주입 성능을 분석해 쉴드 TBM 굴진을 최적화한다." data-en="Characterizing material behavior and injection performance through model experiments to optimize shield-TBM advance.">모형 실험으로 재료 물성과 주입 성능을 분석해 쉴드 TBM 굴진을 최적화한다.</p>
-          <span class="ri-tag" data-ko="모형 실험 · 주입 성능" data-en="Model Testing · Injection Performance">모형 실험 · 주입 성능</span>
+          <h3 class="ri-title" data-ko="쉴드 TBM 테일 보이드용 2액형 뒤채움 그라우트" data-en="Two-component backfill grout for shield TBM tail void">Two-component backfill grout for shield TBM tail void</h3>
+          <p class="ri-desc" data-ko="석사 학위논문. 뒤채움재 물성(플로우·겔화시간·가소성·일축압축강도·블리딩·점도)을 분석하고, 1:8 축소 터널 모형에서 주입 성능(수밀성·충진성·균질도·건전성)을 평가해 쉴드 TBM 뒤채움의 정량적 기준을 제시했다." data-en="Master's thesis. Characterized grout properties — flow, gel time, plasticity, compressive strength, bleeding, viscosity — and evaluated injection performance (watertightness, fillability, homogeneity, soundness) on a 1:8 scaled tunnel model, proposing quantitative criteria for shield-TBM backfilling.">Master's thesis. Characterized grout properties — flow, gel time, plasticity, compressive strength, bleeding, viscosity — and evaluated injection performance (watertightness, fillability, homogeneity, soundness) on a 1:8 scaled tunnel model, proposing quantitative criteria for shield-TBM backfilling.</p>
+          <span class="ri-tag" data-ko="모형 실험 · 주입 성능 · 한전 전력연구원" data-en="Model Testing · Injection Performance · KEPCO">Model Testing · Injection Performance · KEPCO</span><a class="dl" href="kim-hyunjun-ms-thesis-kaist-2025.pdf" target="_blank" rel="noopener" data-ko="학위논문 PDF" data-en="Read the thesis (PDF)">Read the thesis (PDF)&nbsp;<span class="ar" aria-hidden="true">↓</span></a>
         </div>
       </article>
 
       <article class="research-item" data-reveal>
         <div class="ri-index" aria-hidden="true">02</div>
         <div>
-          <h3 class="ri-title" data-ko="점토–박테리아 상호작용" data-en="Clay–bacteria interaction">점토–박테리아 상호작용</h3>
-          <p class="ri-desc" data-ko="침강·압밀 시험으로 토양 정화와 퇴적물 안정화의 가능성을 규명한다." data-en="Sedimentation and consolidation tests revealing pathways for soil remediation and sediment stabilization.">침강·압밀 시험으로 토양 정화와 퇴적물 안정화의 가능성을 규명한다.</p>
-          <span class="ri-tag" data-ko="침강 · 압밀" data-en="Sedimentation · Consolidation">침강 · 압밀</span>
+          <h3 class="ri-title" data-ko="점토–박테리아 상호작용" data-en="Clay–bacteria interaction">Clay–bacteria interaction</h3>
+          <p class="ri-desc" data-ko="카올린과 Shewanella oneidensis MR-1을 이용한 침강·압밀 시험으로, 미생물 상호작용이 퇴적물을 어떻게 치밀화하는지 규명 — 토양 정화와 퇴적물 안정화의 가능성." data-en="Sedimentation and consolidation tests with kaolin and Shewanella oneidensis MR-1, revealing how microbial interaction densifies sediments — pathways for soil remediation and sediment stabilization.">Sedimentation and consolidation tests with kaolin and Shewanella oneidensis MR-1, revealing how microbial interaction densifies sediments — pathways for soil remediation and sediment stabilization.</p>
+          <span class="ri-tag" data-ko="침강 · 압밀" data-en="Sedimentation · Consolidation">Sedimentation · Consolidation</span>
         </div>
       </article>
 
       <article class="research-item" data-reveal>
         <div class="ri-index" aria-hidden="true">03</div>
         <div>
-          <h3 class="ri-title" data-ko="CO₂ 처리 순환골재" data-en="CO₂-treated recycled aggregates">CO₂ 처리 순환골재</h3>
-          <p class="ri-desc" data-ko="CO₂ 처리로 순환골재 성능을 높여 지속가능한 건설 재료를 만든다." data-en="Enhancing recycled-aggregate performance through CO₂ treatment for sustainable construction materials.">CO₂ 처리로 순환골재 성능을 높여 지속가능한 건설 재료를 만든다.</p>
-          <span class="ri-tag" data-ko="탄산화 · 지속가능성" data-en="Carbonation · Sustainability">탄산화 · 지속가능성</span>
+          <h3 class="ri-title" data-ko="CO₂ 처리 순환골재" data-en="CO₂-treated recycled aggregates">CO₂-treated recycled aggregates</h3>
+          <p class="ri-desc" data-ko="탄산화 처리로 순환골재 성능을 개선 — 골재파쇄값(ACV) 30.3%까지 감소, 노상토지지력비(CBR) 137.7%까지 증가 — 하고 침출수 pH·크롬 농도를 낮춰 지속가능한 건설 재료에 기여했다." data-en="Carbonation treatment improved recycled-aggregate performance — crushing value reduced to 30.3% and CBR raised to 137.7% — while lowering leachate pH and chromium, advancing sustainable construction materials.">Carbonation treatment improved recycled-aggregate performance — crushing value reduced to 30.3% and CBR raised to 137.7% — while lowering leachate pH and chromium, advancing sustainable construction materials.</p>
+          <span class="ri-tag" data-ko="탄산화 · 지속가능성 · 한전 전력연구원" data-en="Carbonation · Sustainability · KEPCO">Carbonation · Sustainability · KEPCO</span>
+        </div>
+      </article>
+
+      <article class="research-item" data-reveal>
+        <div class="ri-index" aria-hidden="true">04</div>
+        <div>
+          <h3 class="ri-title" data-ko="점토 혼합 MICP 절리암반 차수" data-en="Clay-mixed MICP for rock-mass sealing">Clay-mixed MICP for rock-mass sealing</h3>
+          <p class="ri-desc" data-ko="점토 혼합 미생물 유도 탄산칼슘 침전(MICP) 기법으로 절리암반을 차수하는 친환경 그라우팅 공법 개발 — 시멘트계 그라우트 의존을 줄인다." data-en="Developing an eco-friendly grouting method that uses clay-mixed microbially induced calcite precipitation (MICP) to seal jointed rock masses — reducing reliance on cement-based grouts.">Developing an eco-friendly grouting method that uses clay-mixed microbially induced calcite precipitation (MICP) to seal jointed rock masses — reducing reliance on cement-based grouts.</p>
+          <span class="ri-tag" data-ko="MICP · 바이오그라우팅 · 한국연구재단" data-en="MICP · Bio-grouting · NRF">MICP · Bio-grouting · NRF</span>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============================== CV (dark interlude) ============================== -->
-<section class="section" id="cv" data-theme="dark" aria-labelledby="cv-h">
+<!-- ============================== PUBLICATIONS (dark) ============================== -->
+<section class="section" id="publications" data-theme="dark" aria-labelledby="pub-h">
   <div class="wrap">
     <div class="eyebrow" data-reveal>
       <span class="tick" aria-hidden="true"></span>
-      <span class="label" data-ko="경력 · 학력" data-en="Experience &amp; Education">경력 · 학력</span>
+      <span class="label" data-ko="논문 · 특허" data-en="Publications &amp; Patent">Publications &amp; Patent</span>
     </div>
-    <h2 class="heading" id="cv-h" data-reveal style="--i:1" data-ko="지나온 지층" data-en="The strata so far">지나온 지층</h2>
+    <h2 class="heading" id="pub-h" data-reveal style="--i:1" data-ko="주요 성과" data-en="Selected output">Selected output</h2>
+
+    <div class="pub-list">
+      <article class="pub-item" data-reveal>
+        <div class="pub-year">2025<span class="pub-type" data-ko="저널 · 심사 중" data-en="Journal">Journal</span></div>
+        <div>
+          <p class="pub-title">Assessment of two-component backfill grouting quality for TBM tail voids via scaled physical modeling: effects of injection flow rate, hardener dosage, and water-to-cement ratio</p>
+          <p class="pub-venue" data-ko="Tunnelling and Underground Space Technology — 주저자, 심사 중" data-en="Tunnelling and Underground Space Technology — first author, under review">Tunnelling and Underground Space Technology — first author, under review</p>
+        </div>
+      </article>
+
+      <article class="pub-item" data-reveal>
+        <div class="pub-year">2025<span class="pub-type" data-ko="국제 학회" data-en="Conference">Conference</span></div>
+        <div>
+          <p class="pub-title">Effect of injection flow rate and Component B on quality of two-component backfill grout for TBM tail voids: scaled model experiment</p>
+          <p class="pub-venue" data-ko="TRANSOILCOLD 2025 — 주저자" data-en="TRANSOILCOLD 2025 — first author">TRANSOILCOLD 2025 — first author</p>
+          <span class="pub-badge" data-ko="★ 베스트 페이퍼" data-en="★ Best Paper Award">★ Best Paper Award</span>
+        </div>
+      </article>
+
+      <article class="pub-item" data-reveal>
+        <div class="pub-year">2025<span class="pub-type" data-ko="국내 학회" data-en="Conference">Conference</span></div>
+        <div>
+          <p class="pub-title">Performance evaluation of two-component backfill grout for TBM tail voids via scaled model experiments</p>
+          <p class="pub-venue" data-ko="한국터널지하공간학회 춘계학술발표회 2025 — 주저자" data-en="Korean Tunnelling &amp; Underground Space Assoc., Spring 2025 — first author">Korean Tunnelling &amp; Underground Space Assoc., Spring 2025 — first author</p>
+          <span class="pub-badge" data-ko="★ 최우수논문 학회장상" data-en="★ Best Paper, President's Award">★ Best Paper, President's Award</span>
+        </div>
+      </article>
+
+      <article class="pub-item" data-reveal>
+        <div class="pub-year">2024<span class="pub-type" data-ko="국내 학회" data-en="Conference">Conference</span></div>
+        <div>
+          <p class="pub-title">Laboratory model study on the flow characteristics of two-component backfill grout for TBM</p>
+          <p class="pub-venue" data-ko="한국지반공학회 춘계학술발표회 2024 — 주저자" data-en="Korean Geotechnical Society, Spring 2024 — first author">Korean Geotechnical Society, Spring 2024 — first author</p>
+        </div>
+      </article>
+
+      <article class="pub-item" data-reveal>
+        <div class="pub-year">2023<span class="pub-type" data-ko="국제 학회" data-en="Conference">Conference</span></div>
+        <div>
+          <p class="pub-title">Effect of pH on clay–bacteria interaction: a sedimentation study</p>
+          <p class="pub-venue" data-ko="제34회 KKHTCNN 토목공학 심포지엄 2023 — 주저자" data-en="34th KKHTCNN Symposium on Civil Engineering, 2023 — first author">34th KKHTCNN Symposium on Civil Engineering, 2023 — first author</p>
+        </div>
+      </article>
+
+      <article class="pub-item" data-reveal>
+        <div class="pub-year">2025<span class="pub-type" data-ko="특허" data-en="Patent">Patent</span></div>
+        <div>
+          <p class="pub-title">System for evaluating the constructability of ground-improvement methods and its operating method</p>
+          <p class="pub-venue" data-ko="출원 KR 10-2025-0072845 — 공동발명자, 출원(심사청구)" data-en="KR application 10-2025-0072845 — co-inventor, filed (under examination)">KR application 10-2025-0072845 — co-inventor, filed (under examination)</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== CV ============================== -->
+<section class="section" id="cv" data-theme="light" aria-labelledby="cv-h">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal>
+      <span class="tick" aria-hidden="true"></span>
+      <span class="label" data-ko="경력 · 학력" data-en="Experience &amp; Education">Experience &amp; Education</span>
+    </div>
+    <h2 class="heading" id="cv-h" data-reveal style="--i:1" data-ko="지나온 지층" data-en="The strata so far">The strata so far</h2>
 
     <div class="cv-block">
-      <p class="cv-group-label" data-reveal data-ko="경력" data-en="Experience">경력</p>
+      <p class="cv-group-label" data-reveal data-ko="경력" data-en="Experience">Experience</p>
       <div class="cv-row" data-reveal>
         <span class="cv-year">2026 —</span>
-        <span class="cv-role" data-ko="GS건설 · R.I.F Tech. 연구원" data-en="Research Engineer — GS E&amp;C, R.I.F Tech.">GS건설 · R.I.F Tech. 연구원</span>
-        <span class="cv-gpa" data-ko="서울" data-en="Seoul">서울</span>
+        <span class="cv-role"><span data-ko="GS건설 · R.I.F Tech. 연구원" data-en="Research Engineer — GS E&amp;C, R.I.F Tech.">Research Engineer — GS E&amp;C, R.I.F Tech.</span><span class="cv-note" data-ko="지반·터널 엔지니어링팀, 기반기술연구센터" data-en="Geotechnical &amp; Tunnel Engineering Team, Fundamental Technology Research Center">Geotechnical &amp; Tunnel Engineering Team, Fundamental Technology Research Center</span></span>
+        <span class="cv-gpa" data-ko="서울" data-en="Seoul">Seoul</span>
       </div>
       <div class="cv-row" data-reveal>
-        <span class="cv-year" data-ko="2025.9 – 12" data-en="SEP – DEC 2025">2025.9 – 12</span>
-        <span class="cv-role" data-ko="한국건설기술연구원(KICT) · 석사후연구원" data-en="Post-master’s Researcher — KICT">한국건설기술연구원(KICT) · 석사후연구원</span>
-        <span class="cv-gpa" data-ko="고양" data-en="Goyang">고양</span>
+        <span class="cv-year" data-ko="2025.9 – 12" data-en="SEP – DEC 2025">SEP – DEC 2025</span>
+        <span class="cv-role"><span data-ko="한국건설기술연구원(KICT) · 석사후연구원" data-en="Post-master’s Researcher — KICT">Post-master’s Researcher — KICT</span><span class="cv-note" data-ko="미래스마트건설연구본부 — 스마트시티 평가지표 산정, 디지털 트윈 기반 시설물 유지관리" data-en="Future &amp; Smart Construction Division — smart-city KPIs, digital-twin facility maintenance">Future &amp; Smart Construction Division — smart-city KPIs, digital-twin facility maintenance</span></span>
+        <span class="cv-gpa" data-ko="고양" data-en="Goyang">Goyang</span>
       </div>
       <div class="cv-row" data-reveal>
-        <span class="cv-year" data-ko="2025.4 – 8" data-en="APR – AUG 2025">2025.4 – 8</span>
-        <span class="cv-role" data-ko="KAIST · 위촉연구원" data-en="Commissioned Researcher — KAIST">KAIST · 위촉연구원</span>
-        <span class="cv-gpa" data-ko="대전" data-en="Daejeon">대전</span>
+        <span class="cv-year" data-ko="2025.4 – 8" data-en="APR – AUG 2025">APR – AUG 2025</span>
+        <span class="cv-role"><span data-ko="KAIST · 위촉연구원" data-en="Commissioned Researcher — KAIST">Commissioned Researcher — KAIST</span><span class="cv-note" data-ko="지반에너지연구실 — 모형 및 실대형 실험 수행, 결과 분석" data-en="Geo-Energy Lab — model &amp; large-scale experiments, data analysis">Geo-Energy Lab — model &amp; large-scale experiments, data analysis</span></span>
+        <span class="cv-gpa" data-ko="대전" data-en="Daejeon">Daejeon</span>
       </div>
 
-      <p class="cv-group-label" data-reveal data-ko="학력" data-en="Education">학력</p>
+      <p class="cv-group-label" data-reveal data-ko="학력" data-en="Education">Education</p>
       <div class="cv-row" data-reveal>
         <span class="cv-year">2023 – 2025</span>
-        <span class="cv-role" data-ko="KAIST · 건설및환경공학 석사" data-en="M.S. Civil &amp; Environmental Engineering — KAIST">KAIST · 건설및환경공학 석사</span>
+        <span class="cv-role"><span data-ko="KAIST · 건설및환경공학 석사" data-en="M.S. Civil &amp; Environmental Engineering — KAIST">M.S. Civil &amp; Environmental Engineering — KAIST</span><span class="cv-note" data-ko="지도교수 — 권태혁 교수 (지반에너지연구실)" data-en="Advisor — Prof. Tae-Hyuk Kwon (Geo-Energy Lab)">Advisor — Prof. Tae-Hyuk Kwon (Geo-Energy Lab)</span></span>
         <span class="cv-gpa">GPA <span class="num">3.92</span>/4.3</span>
       </div>
       <div class="cv-row" data-reveal>
         <span class="cv-year">2017 – 2023</span>
-        <span class="cv-role" data-ko="경희대학교 · 사회기반시스템공학 학사" data-en="B.S. Civil Engineering — Kyung Hee University">경희대학교 · 사회기반시스템공학 학사</span>
+        <span class="cv-role" data-ko="경희대학교 · 사회기반시스템공학 학사" data-en="B.S. Civil Engineering — Kyung Hee University">B.S. Civil Engineering — Kyung Hee University</span>
         <span class="cv-gpa">GPA <span class="num">4.03</span>/4.5</span>
+      </div>
+
+      <p class="cv-group-label" data-reveal data-ko="수상" data-en="Honors">Honors</p>
+      <div class="cv-row" data-reveal>
+        <span class="cv-year" data-ko="2025.9" data-en="SEP 2025">SEP 2025</span>
+        <span class="cv-role" data-ko="베스트 페이퍼 어워드" data-en="Best Paper Award">Best Paper Award</span>
+        <span class="cv-gpa">TRANSOILCOLD 2025</span>
+      </div>
+      <div class="cv-row" data-reveal>
+        <span class="cv-year" data-ko="2025.4" data-en="APR 2025">APR 2025</span>
+        <span class="cv-role" data-ko="최우수논문 학회장상" data-en="Best Paper, President’s Award">Best Paper, President’s Award</span>
+        <span class="cv-gpa" data-ko="한국터널지하공간학회" data-en="KTA">KTA</span>
+      </div>
+      <div class="cv-row" data-reveal>
+        <span class="cv-year" data-ko="2024.9" data-en="SEP 2024">SEP 2024</span>
+        <span class="cv-role" data-ko="연구실 안전관리 우수상" data-en="Lab Safety Management Award">Lab Safety Management Award</span>
+        <span class="cv-gpa">KAIST</span>
+      </div>
+
+      <p class="cv-group-label" data-reveal data-ko="자격 · 역량" data-en="Credentials">Credentials</p>
+      <div class="cred-grid" data-reveal>
+        <div class="cred-item">
+          <div class="cred-k" data-ko="자격" data-en="Certification">Certification</div>
+          <div class="cred-v" data-ko="토목기사 (한국산업인력공단, 2022)" data-en="Professional Engineer, Civil Engineering — HRD Korea, 2022">Professional Engineer, Civil Engineering — HRD Korea, 2022</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-k" data-ko="어학" data-en="Language">Language</div>
+          <div class="cred-v" data-ko="영어 — OPIc IH · 한국어 (모국어)" data-en="English — OPIc IH · Korean (native)">English — OPIc IH · Korean (native)</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-k" data-ko="도구" data-en="Tools">Tools</div>
+          <div class="cred-v">Python · MATLAB · ABAQUS · AutoCAD</div>
+        </div>
       </div>
     </div>
   </div>
@@ -495,9 +489,9 @@
   <div class="wrap">
     <div class="eyebrow" data-reveal>
       <span class="tick" aria-hidden="true"></span>
-      <span class="label" data-ko="연락처" data-en="Contact">연락처</span>
+      <span class="label" data-ko="연락처" data-en="Contact">Contact</span>
     </div>
-    <h2 class="contact-line" id="contact-h" data-reveal data-ko="내일의 지반을 함께 짓다." data-en="Let’s build the ground beneath what’s next.">내일의 지반을 함께 짓다.</h2>
+    <h2 class="contact-line" id="contact-h" data-reveal data-ko="내일의 지반을 함께 짓다." data-en="Let’s build the ground beneath what’s next.">Let’s build the ground beneath what’s next.</h2>
 
     <div class="mail-wrap" data-reveal style="--i:1">
       <a class="mail" href="mailto:hyunjunkim987@gmail.com" data-mail="hyunjunkim987@gmail.com" id="mail">hyunjunkim987@gmail.com<span class="copy-label" aria-live="polite"></span></a>
@@ -505,23 +499,23 @@
 
     <div class="contact-meta" data-reveal style="--i:2">
       <div class="meta-col">
-        <div class="meta-k" data-ko="위치" data-en="Location">위치</div>
-        <div class="meta-v" data-ko="대한민국 서울" data-en="Seoul, Korea">대한민국 서울</div>
+        <div class="meta-k" data-ko="위치" data-en="Location">Location</div>
+        <div class="meta-v" data-ko="대한민국 서울" data-en="Seoul, Korea">Seoul, Korea</div>
       </div>
       <div class="meta-col">
-        <div class="meta-k" data-ko="소속" data-en="Affiliation">소속</div>
-        <div class="meta-v" data-ko="GS건설 · 기반기술연구센터" data-en="GS E&amp;C · Fundamental Technology Research Center">GS건설 · 기반기술연구센터</div>
+        <div class="meta-k" data-ko="소속" data-en="Affiliation">Affiliation</div>
+        <div class="meta-v" data-ko="GS건설 · 기반기술연구센터" data-en="GS E&amp;C · Fundamental Technology Research Center">GS E&amp;C · Fundamental Technology Research Center</div>
       </div>
       <div class="meta-col">
-        <div class="meta-k" data-ko="링크" data-en="Elsewhere">링크</div>
+        <div class="meta-k" data-ko="링크" data-en="Elsewhere">Elsewhere</div>
         <a class="meta-v" href="https://www.linkedin.com/in/hyun-jun-kim-154b50269/" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </div>
   </div>
 
   <div class="colophon">
-    <span data-ko="© 2026 김현준" data-en="© 2026 Hyun-Jun Kim">© 2026 김현준</span>
-    <span class="totop" id="totop" data-ko="맨 위로 ↑" data-en="Back to top ↑">맨 위로 ↑</span>
+    <span data-ko="© 2026 김현준" data-en="© 2026 Hyun-Jun Kim">© 2026 Hyun-Jun Kim</span>
+    <span class="totop" id="totop" data-ko="맨 위로 ↑" data-en="Back to top ↑">Back to top ↑</span>
   </div>
 </section>
 </main>
@@ -566,11 +560,10 @@
     try{ localStorage.setItem('lang', lang); }catch(e){}
     markBtns(lang);
   }
-  var initial = 'ko';
+  var initial = 'en';
   try{
     var saved = localStorage.getItem('lang');
     if(saved === 'ko' || saved === 'en'){ initial = saved; }
-    else { initial = (navigator.language||'').toLowerCase().indexOf('ko')===0 ? 'ko' : 'en'; }
   }catch(e){}
   applyLang(initial); markBtns(initial);
   var langButtons = document.querySelectorAll('.lang-btn');
@@ -642,8 +635,8 @@
       rings[k].style.transitionDelay = (k * 0.07) + 's';
     }
     requestAnimationFrame(function(){ requestAnimationFrame(function(){
-      var rr = document.querySelectorAll('#bore-rings circle');
-      for(var m=0;m<rr.length;m++){ rr[m].style.strokeDashoffset = '0'; }
+      var rr2 = document.querySelectorAll('#bore-rings circle');
+      for(var m=0;m<rr2.length;m++){ rr2[m].style.strokeDashoffset = '0'; }
     }); });
   }
 
@@ -665,12 +658,7 @@
       for(var i=0;i<40;i++){
         var a = Math.random()*Math.PI*2;
         var rad = far*(0.22 + Math.random()*0.55);
-        parts.push({
-          x: cx + Math.cos(a)*rad, y: cy + Math.sin(a)*rad,
-          sp: 0.05 + Math.random()*0.12,
-          al: 0.04 + Math.random()*0.045,
-          s: 0.6 + Math.random()*1.3
-        });
+        parts.push({ x: cx + Math.cos(a)*rad, y: cy + Math.sin(a)*rad, sp: 0.05 + Math.random()*0.12, al: 0.04 + Math.random()*0.045, s: 0.6 + Math.random()*1.3 });
       }
     }
     function frame(){
@@ -680,14 +668,8 @@
         var p = parts[i];
         var dx = cx-p.x, dy = cy-p.y, d = Math.sqrt(dx*dx+dy*dy)||1;
         p.x += dx/d*p.sp; p.y += dy/d*p.sp;
-        if(d < 26){
-          var a = Math.random()*Math.PI*2, rad = far*(0.5 + Math.random()*0.3);
-          p.x = cx + Math.cos(a)*rad; p.y = cy + Math.sin(a)*rad;
-        }
-        ctx.beginPath();
-        ctx.fillStyle = 'rgba(233,238,242,'+p.al+')';
-        ctx.arc(p.x, p.y, p.s, 0, Math.PI*2);
-        ctx.fill();
+        if(d < 26){ var a = Math.random()*Math.PI*2, rad = far*(0.5 + Math.random()*0.3); p.x = cx + Math.cos(a)*rad; p.y = cy + Math.sin(a)*rad; }
+        ctx.beginPath(); ctx.fillStyle = 'rgba(233,238,242,'+p.al+')'; ctx.arc(p.x, p.y, p.s, 0, Math.PI*2); ctx.fill();
       }
       raf = requestAnimationFrame(frame);
     }
@@ -710,17 +692,11 @@
       var addr = mail.getAttribute('data-mail');
       var done = function(){
         var lbl = mail.querySelector('.copy-label');
-        if(lbl){
-          var lang = root.getAttribute('data-lang') || 'ko';
-          lbl.textContent = lang==='ko' ? '복사됨' : 'Copied';
-          setTimeout(function(){ lbl.textContent = ''; }, 1500);
-        }
+        if(lbl){ var lang = root.getAttribute('data-lang') || 'en'; lbl.textContent = lang==='ko' ? '복사됨' : 'Copied'; setTimeout(function(){ lbl.textContent = ''; }, 1500); }
       };
       if(navigator.clipboard && navigator.clipboard.writeText){
         navigator.clipboard.writeText(addr).then(done, function(){ window.location.href = 'mailto:'+addr; });
-      } else {
-        window.location.href = 'mailto:'+addr;
-      }
+      } else { window.location.href = 'mailto:'+addr; }
     });
   }
 
