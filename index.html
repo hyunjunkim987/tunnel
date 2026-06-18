@@ -125,9 +125,11 @@
   /* ============================== FOCUS ============================== */
   .focus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--hairline)}
   @media(max-width:680px){.focus-grid{grid-template-columns:1fr}}
-  .focus-item{display:flex;align-items:baseline;gap:18px;padding:clamp(20px,3vh,30px) 4px;border-bottom:1px solid var(--hairline)}
-  .focus-item .fi-num{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.05em;flex:none;width:30px}
-  .focus-item .fi-name{font-size:clamp(19px,2.2vw,28px);font-weight:500;letter-spacing:-.01em}
+  .focus-item{display:flex;align-items:flex-start;gap:18px;padding:clamp(28px,4.5vh,46px) 4px;border-bottom:1px solid var(--hairline)}
+  .focus-item .fi-num{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.05em;flex:none;width:30px;padding-top:6px}
+  .fi-body{min-width:0}
+  .focus-item .fi-name{display:block;font-size:clamp(19px,2.1vw,25px);font-weight:500;letter-spacing:-.01em}
+  .fi-desc{display:block;margin-top:9px;font-size:14.5px;line-height:1.55;color:var(--muted);max-width:44ch}
   @media(min-width:681px){.focus-item:nth-child(odd){padding-right:clamp(24px,4vw,56px)}.focus-item:nth-child(even){padding-left:clamp(24px,4vw,56px);border-left:1px solid var(--hairline)}}
 
   /* ============================== RESEARCH ============================== */
@@ -339,12 +341,12 @@
     </div>
     <h2 class="heading" id="focus-h" data-reveal style="--i:1" data-ko="내가 다루는 것" data-en="What I work on">What I work on</h2>
     <div class="focus-grid" data-reveal style="--i:2">
-      <div class="focus-item"><span class="fi-num">01</span><span class="fi-name" data-ko="지하 공간" data-en="Underground Space">Underground Space</span></div>
-      <div class="focus-item"><span class="fi-num">02</span><span class="fi-name" data-ko="TBM · 쉴드 터널" data-en="TBM &amp; Shield Tunnelling">TBM &amp; Shield Tunnelling</span></div>
-      <div class="focus-item"><span class="fi-num">03</span><span class="fi-name" data-ko="지반공학" data-en="Geotechnical Engineering">Geotechnical Engineering</span></div>
-      <div class="focus-item"><span class="fi-num">04</span><span class="fi-name" data-ko="스마트 건설" data-en="Smart Construction">Smart Construction</span></div>
-      <div class="focus-item"><span class="fi-num">05</span><span class="fi-name" data-ko="디지털 트윈" data-en="Digital Twin">Digital Twin</span></div>
-      <div class="focus-item"><span class="fi-num">06</span><span class="fi-name" data-ko="지속가능성" data-en="Sustainability">Sustainability</span></div>
+      <div class="focus-item"><span class="fi-num">01</span><div class="fi-body"><span class="fi-name" data-ko="지하 공간" data-en="Underground Space">Underground Space</span><span class="fi-desc" data-ko="터널·수직구 등 지표 아래에 만드는 공간." data-en="Tunnels, shafts and the usable space we open beneath the surface.">Tunnels, shafts and the usable space we open beneath the surface.</span></div></div>
+      <div class="focus-item"><span class="fi-num">02</span><div class="fi-body"><span class="fi-name" data-ko="TBM · 쉴드 터널" data-en="TBM &amp; Shield Tunnelling">TBM &amp; Shield Tunnelling</span><span class="fi-desc" data-ko="쉴드 TBM과 세그먼트 라이닝을 이용한 기계화 굴착." data-en="Mechanized excavation with shield TBMs and segmental linings.">Mechanized excavation with shield TBMs and segmental linings.</span></div></div>
+      <div class="focus-item"><span class="fi-num">03</span><div class="fi-body"><span class="fi-name" data-ko="지반공학" data-en="Geotechnical Engineering">Geotechnical Engineering</span><span class="fi-desc" data-ko="흙과 암반의 거동, 그리고 그 위와 속에 짓는 방법." data-en="How soil and rock behave — and how to build on and through them.">How soil and rock behave — and how to build on and through them.</span></div></div>
+      <div class="focus-item"><span class="fi-num">04</span><div class="fi-body"><span class="fi-name" data-ko="스마트 건설" data-en="Smart Construction">Smart Construction</span><span class="fi-desc" data-ko="데이터·센싱·디지털 도구로 현장을 더 안전하고 빠르게." data-en="Data, sensing and digital tools that make sites safer and faster.">Data, sensing and digital tools that make sites safer and faster.</span></div></div>
+      <div class="focus-item"><span class="fi-num">05</span><div class="fi-body"><span class="fi-name" data-ko="디지털 트윈" data-en="Digital Twin">Digital Twin</span><span class="fi-desc" data-ko="가상 모델로 시설물을 모니터링하고 유지관리." data-en="Virtual models for monitoring and maintaining built assets.">Virtual models for monitoring and maintaining built assets.</span></div></div>
+      <div class="focus-item"><span class="fi-num">06</span><div class="fi-body"><span class="fi-name" data-ko="지속가능성" data-en="Sustainability">Sustainability</span><span class="fi-desc" data-ko="저탄소·순환·고내구 건설 재료." data-en="Lower-carbon, recycled and longer-lasting construction materials.">Lower-carbon, recycled and longer-lasting construction materials.</span></div></div>
     </div>
   </div>
 </section>
