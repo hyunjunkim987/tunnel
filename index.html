@@ -122,6 +122,15 @@
   .pull .em{color:var(--accent)}
   .mission-sub{margin-top:clamp(34px,5vh,52px);max-width:56ch;font-size:clamp(16px,1.5vw,19px);color:var(--muted);line-height:1.7}
 
+  /* ============================== NOW ============================== */
+  .now-intro{margin-top:clamp(28px,4vh,44px);max-width:62ch;font-size:clamp(16px,1.6vw,20px);line-height:1.6;color:var(--muted)}
+  .now-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);margin-top:clamp(36px,6vh,64px)}
+  @media(max-width:680px){.now-grid{grid-template-columns:1fr;gap:36px}}
+  .now-k{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+  html[data-lang="ko"] .now-k{font-family:var(--kr);text-transform:none;letter-spacing:.02em;font-size:14px}
+  .now-list{list-style:none}
+  .now-list li{padding:13px 0;border-top:1px solid var(--hairline);font-size:15.5px;line-height:1.55}
+
   /* ============================== FOCUS ============================== */
   .focus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--hairline)}
   @media(max-width:680px){.focus-grid{grid-template-columns:1fr}}
@@ -252,6 +261,7 @@
   <a class="brand" href="#hero" data-ko="김현준" data-en="Hyun-Jun Kim">Hyun-Jun Kim</a>
   <div class="nav-links">
     <a class="nav-link" href="#mission" data-ko="미션" data-en="Mission">Mission</a>
+    <a class="nav-link" href="#now" data-ko="현재" data-en="Now">Now</a>
     <a class="nav-link" href="#focus" data-ko="집중 분야" data-en="Focus">Focus</a>
     <a class="nav-link" href="#research" data-ko="연구" data-en="Research">Research</a>
     <a class="nav-link" href="#publications" data-ko="성과" data-en="Output">Output</a>
@@ -331,6 +341,37 @@
     </div>
     <h2 class="pull" id="mission-h" data-reveal><span data-ko="땅은 극복할 대상이 아니라, " data-en="The ground is not an obstacle. It is the ">The ground is not an obstacle. It is the </span><span class="em" data-ko="구조" data-en="structure">structure</span><span data-ko=" 그 자체다." data-en=".">.</span></h2>
     <p class="mission-sub" data-reveal style="--i:1" data-ko="나는 토질역학과 디지털 도구가 맞닿는 지점에서 일한다. 땅의 거동을 규명하고, 터널 시공을 더 안전하고 빠르게 만드는 모델과 방법을 만든다." data-en="I work where soil mechanics meets digital tools — characterizing how the ground behaves, then building the models and methods that make tunnelling safer and faster.">I work where soil mechanics meets digital tools — characterizing how the ground behaves, then building the models and methods that make tunnelling safer and faster.</p>
+  </div>
+</section>
+
+<!-- ============================== NOW ============================== -->
+<section class="section" id="now" data-theme="dark" aria-labelledby="now-h">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal>
+      <span class="tick" aria-hidden="true"></span>
+      <span class="label" data-ko="현재" data-en="Now">Now</span>
+    </div>
+    <h2 class="heading" id="now-h" data-reveal style="--i:1" data-ko="연구와 현장 사이에서" data-en="Between research and the field">Between research and the field</h2>
+    <p class="now-intro" data-reveal style="--i:2" data-ko="GS건설 R&amp;D 센터의 연구원으로, 연구과제와 터널 현장 기술지원을 함께 수행한다." data-en="A research engineer at GS E&amp;C's R&amp;D center, splitting my time between research projects and hands-on technical support for tunnel sites.">A research engineer at GS E&amp;C's R&amp;D center, splitting my time between research projects and hands-on technical support for tunnel sites.</p>
+    <div class="now-grid" data-reveal style="--i:3">
+      <div class="now-col">
+        <p class="now-k" data-ko="현장 기술지원" data-en="Field technical support">Field technical support</p>
+        <ul class="now-list">
+          <li data-ko="막장 암판정" data-en="Rock-mass classification at the tunnel face">Rock-mass classification at the tunnel face</li>
+          <li data-ko="설계·설계변경 검토" data-en="Design and design-change review">Design and design-change review</li>
+          <li data-ko="GPR·TSP 물리탐사" data-en="GPR and TSP geophysical surveys">GPR and TSP geophysical surveys</li>
+          <li data-ko="의견검토서 작성" data-en="Technical opinion and review reports">Technical opinion and review reports</li>
+        </ul>
+      </div>
+      <div class="now-col">
+        <p class="now-k" data-ko="연구개발" data-en="Research &amp; development">Research &amp; development</p>
+        <ul class="now-list">
+          <li data-ko="엔지니어링 툴 개발 (TBM 생산성 분석·예측 툴 등)" data-en="Engineering tools — incl. a TBM productivity analysis and prediction tool">Engineering tools — incl. a TBM productivity analysis and prediction tool</li>
+          <li data-ko="향후 약 5년 사업 수주를 위한 TBM 기술 탐색" data-en="Scouting TBM technologies for the project pipeline over the next ~5 years">Scouting TBM technologies for the project pipeline over the next ~5 years</li>
+          <li data-ko="국책연구과제 K-SCOUR (안전하고 편리한 지하도로 건설기술, 한국건설기술연구원 주관)" data-en="National R&amp;D — K-SCOUR: safe, convenient underground roads (led by KICT)">National R&amp;D — K-SCOUR: safe, convenient underground roads (led by KICT)</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
