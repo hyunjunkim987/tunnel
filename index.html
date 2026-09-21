@@ -106,7 +106,7 @@
   html[data-lang="ko"] .hero-kicker{font-family:var(--kr);text-transform:none;letter-spacing:.04em;font-size:clamp(13px,1.3vw,15px)}
   h1.name{font-weight:600;line-height:.98;letter-spacing:-.03em;font-size:clamp(48px,9vw,132px);color:#F4F7F9}
   html[data-lang="ko"] h1.name{letter-spacing:-.01em}
-  .hero-mission{margin-top:clamp(22px,3.4vh,34px);max-width:34ch;font-size:clamp(16px,1.7vw,21px);line-height:1.5;color:#B9C2CB;font-weight:400}
+  .hero-mission{margin-top:clamp(22px,3.4vh,34px);max-width:40ch;font-size:clamp(16px,1.7vw,21px);line-height:1.5;color:#B9C2CB;font-weight:400}
   .scroll-cue{margin-top:clamp(34px,5vh,56px);display:inline-flex;flex-direction:column;align-items:flex-start;gap:10px;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#7E8A95}
   html[data-lang="ko"] .scroll-cue{font-family:var(--kr);text-transform:none;letter-spacing:.05em;font-size:12px}
   .chev{width:16px;height:16px;border-right:1.4px solid #7E8A95;border-bottom:1.4px solid #7E8A95;transform:rotate(45deg);animation:bob 1.9s var(--ease) infinite}
@@ -124,12 +124,7 @@
 
   /* ============================== NOW ============================== */
   .now-intro{margin-top:clamp(28px,4vh,44px);max-width:62ch;font-size:clamp(16px,1.6vw,20px);line-height:1.6;color:var(--muted)}
-  .now-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);margin-top:clamp(36px,6vh,64px)}
-  @media(max-width:680px){.now-grid{grid-template-columns:1fr;gap:36px}}
-  .now-k{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
-  html[data-lang="ko"] .now-k{font-family:var(--kr);text-transform:none;letter-spacing:.02em;font-size:14px}
-  .now-list{list-style:none}
-  .now-list li{padding:13px 0;border-top:1px solid var(--hairline);font-size:15.5px;line-height:1.55}
+  #now .wrap{padding-top:clamp(120px,18vh,220px)}
 
   /* ============================== FOCUS ============================== */
   .focus-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--hairline)}
@@ -260,11 +255,11 @@
 <nav class="nav" data-theme="dark" aria-label="Primary">
   <a class="brand" href="#hero" data-ko="김현준" data-en="Hyun-Jun Kim">Hyun-Jun Kim</a>
   <div class="nav-links">
-    <a class="nav-link" href="#mission" data-ko="미션" data-en="Mission">Mission</a>
     <a class="nav-link" href="#now" data-ko="현재" data-en="Now">Now</a>
+    <a class="nav-link" href="#mission" data-ko="미션" data-en="Mission">Mission</a>
     <a class="nav-link" href="#focus" data-ko="집중 분야" data-en="Focus">Focus</a>
-    <a class="nav-link" href="#research" data-ko="연구" data-en="Research">Research</a>
     <a class="nav-link" href="#publications" data-ko="성과" data-en="Output">Output</a>
+    <a class="nav-link" href="#research" data-ko="연구" data-en="Research">Research</a>
     <a class="nav-link" href="#cv" data-ko="경력" data-en="Experience">Experience</a>
     <a class="nav-link" href="#contact" data-ko="연락처" data-en="Contact">Contact</a>
   </div>
@@ -320,9 +315,9 @@
   <div class="hero-flash" aria-hidden="true"></div>
   <div class="hero-inner">
     <img class="hero-avatar" src="profile.jpg?v=2" alt="Hyun-Jun Kim" />
-    <p class="hero-kicker" data-ko="지반공학 · 터널 · TBM" data-en="GEOTECHNICAL · TUNNEL · TBM SPECIALIST">GEOTECHNICAL · TUNNEL · TBM SPECIALIST</p>
+    <p class="hero-kicker" data-ko="GS건설 지반터널팀 연구원 · 터널 · TBM" data-en="RESEARCH ENGINEER · GS E&amp;C · GEOTECHNICAL &amp; TUNNEL">RESEARCH ENGINEER · GS E&amp;C · GEOTECHNICAL &amp; TUNNEL</p>
     <h1 class="name" data-ko="김현준" data-en="Hyun-Jun Kim">Hyun-Jun Kim</h1>
-    <p class="hero-mission" data-ko="전통 지반공학과 스마트 건설 기술을 잇다. 더 안전하고 효율적인 지하 공간을 위해." data-en="Bridging traditional geotechnics with smart construction — for safer, more efficient underground space.">Bridging traditional geotechnics with smart construction — for safer, more efficient underground space.</p>
+    <p class="hero-mission" data-ko="GS건설 R&amp;D 센터에서 TBM 데이터와 설계 검토, 그리고 막장 사이를 오간다. 더 안전하고 생산적인 터널을 위해." data-en="At GS E&amp;C's R&amp;D center I move between TBM data, design review and the tunnel face — for safer, more productive tunnels.">At GS E&amp;C's R&amp;D center I move between TBM data, design review and the tunnel face — for safer, more productive tunnels.</p>
     <a class="scroll-cue" href="#mission">
       <span data-ko="스크롤" data-en="SCROLL">SCROLL</span>
       <span class="chev" aria-hidden="true"></span>
@@ -332,8 +327,44 @@
 </header>
 
 <main>
+<!-- ============================== NOW ============================== -->
+<section class="section" id="now" data-theme="light" aria-labelledby="now-h">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal>
+      <span class="tick" aria-hidden="true"></span>
+      <span class="label" data-ko="현재 · GS건설" data-en="Now · GS E&amp;C">Now · GS E&amp;C</span>
+    </div>
+    <h2 class="heading" id="now-h" data-reveal style="--i:1" data-ko="연구와 현장 사이에서" data-en="Between research and the field">Between research and the field</h2>
+    <p class="now-intro" data-reveal style="--i:2" data-ko="GS건설 지반터널팀(R&amp;D 센터) 연구원. TBM 운전 데이터 분석에서 설계 검토, 그리고 막장까지, 해석이 현장에서 통해야 하는 일을 한다." data-en="Research engineer in GS E&amp;C's Geotechnical &amp; Tunnel Team (R&amp;D center). My work runs from TBM operation data to design review to the tunnel face — where the analysis has to hold up on site.">Research engineer in GS E&amp;C's Geotechnical &amp; Tunnel Team (R&amp;D center). My work runs from TBM operation data to design review to the tunnel face — where the analysis has to hold up on site.</p>
+
+    <div class="research-list">
+      <article class="research-item" data-reveal>
+        <div class="ri-index" aria-hidden="true" data-parallax="-0.05">01</div>
+        <div>
+          <h3 class="ri-title" data-ko="TBM 생산성 개선" data-en="TBM productivity improvement">TBM productivity improvement</h3>
+          <p class="ri-desc" data-ko="TBM 굴진 및 장비 운전(Operation) 데이터를 분석해 손실 시간을 찾아내고, 생산성을 높이는 개선안을 도출한다." data-en="Analysing TBM advance and equipment operation data to locate lost time and raise productivity on active drives.">Analysing TBM advance and equipment operation data to locate lost time and raise productivity on active drives.</p>
+        </div>
+      </article>
+      <article class="research-item" data-reveal style="--i:1">
+        <div class="ri-index" aria-hidden="true" data-parallax="-0.05">02</div>
+        <div>
+          <h3 class="ri-title" data-ko="사전설계도서 검토" data-en="Preliminary design review">Preliminary design review</h3>
+          <p class="ri-desc" data-ko="시공 전 설계도서를 검토해 지반 조건, 터널 지보, 시공성을 점검한다." data-en="Reviewing design documents ahead of construction — ground conditions, tunnel support and constructability.">Reviewing design documents ahead of construction — ground conditions, tunnel support and constructability.</p>
+        </div>
+      </article>
+      <article class="research-item" data-reveal style="--i:2">
+        <div class="ri-index" aria-hidden="true" data-parallax="-0.05">03</div>
+        <div>
+          <h3 class="ri-title" data-ko="현장 기술지원" data-en="On-site technical support">On-site technical support</h3>
+          <p class="ri-desc" data-ko="막장 암판정, 계측값 1차 관리기준치 초과 시 대책 수립, 비탈면 안정성 검토, GPR·TSP 물리탐사, 의견검토서 작성." data-en="Rock-mass classification at the face, countermeasures when monitoring exceeds Level-1 management thresholds, slope stability review, GPR and TSP geophysical surveys, and technical opinion reports.">Rock-mass classification at the face, countermeasures when monitoring exceeds Level-1 management thresholds, slope stability review, GPR and TSP geophysical surveys, and technical opinion reports.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ============================== MISSION ============================== -->
-<section class="section" id="mission" data-theme="light" aria-labelledby="mission-h">
+<section class="section" id="mission" data-theme="dark" aria-labelledby="mission-h">
   <div class="wrap">
     <div class="eyebrow" data-reveal>
       <span class="tick" aria-hidden="true"></span>
@@ -341,37 +372,6 @@
     </div>
     <h2 class="pull" id="mission-h" data-reveal><span data-ko="땅은 극복할 대상이 아니라, " data-en="The ground is not an obstacle. It is the ">The ground is not an obstacle. It is the </span><span class="em" data-ko="구조" data-en="structure">structure</span><span data-ko=" 그 자체다." data-en=".">.</span></h2>
     <p class="mission-sub" data-reveal style="--i:1" data-ko="나는 토질역학과 디지털 도구가 맞닿는 지점에서 일한다. 땅의 거동을 규명하고, 터널 시공을 더 안전하고 빠르게 만드는 모델과 방법을 만든다." data-en="I work where soil mechanics meets digital tools — characterizing how the ground behaves, then building the models and methods that make tunnelling safer and faster.">I work where soil mechanics meets digital tools — characterizing how the ground behaves, then building the models and methods that make tunnelling safer and faster.</p>
-  </div>
-</section>
-
-<!-- ============================== NOW ============================== -->
-<section class="section" id="now" data-theme="dark" aria-labelledby="now-h">
-  <div class="wrap">
-    <div class="eyebrow" data-reveal>
-      <span class="tick" aria-hidden="true"></span>
-      <span class="label" data-ko="현재" data-en="Now">Now</span>
-    </div>
-    <h2 class="heading" id="now-h" data-reveal style="--i:1" data-ko="연구와 현장 사이에서" data-en="Between research and the field">Between research and the field</h2>
-    <p class="now-intro" data-reveal style="--i:2" data-ko="GS건설 R&amp;D 센터의 연구원으로, 연구과제와 터널 현장 기술지원을 함께 수행한다." data-en="A research engineer at GS E&amp;C's R&amp;D center, splitting my time between research projects and hands-on technical support for tunnel sites.">A research engineer at GS E&amp;C's R&amp;D center, splitting my time between research projects and hands-on technical support for tunnel sites.</p>
-    <div class="now-grid" data-reveal style="--i:3">
-      <div class="now-col">
-        <p class="now-k" data-ko="현장 기술지원" data-en="Field technical support">Field technical support</p>
-        <ul class="now-list">
-          <li data-ko="막장 암판정" data-en="Rock-mass classification at the tunnel face">Rock-mass classification at the tunnel face</li>
-          <li data-ko="설계·설계변경 검토" data-en="Design and design-change review">Design and design-change review</li>
-          <li data-ko="GPR·TSP 물리탐사" data-en="GPR and TSP geophysical surveys">GPR and TSP geophysical surveys</li>
-          <li data-ko="의견검토서 작성" data-en="Technical opinion and review reports">Technical opinion and review reports</li>
-        </ul>
-      </div>
-      <div class="now-col">
-        <p class="now-k" data-ko="연구개발" data-en="Research &amp; development">Research &amp; development</p>
-        <ul class="now-list">
-          <li data-ko="엔지니어링 툴 개발 (TBM 생산성 분석·예측 툴 등)" data-en="Engineering tools — incl. a TBM productivity analysis and prediction tool">Engineering tools — incl. a TBM productivity analysis and prediction tool</li>
-          <li data-ko="향후 약 5년 사업 수주를 위한 TBM 기술 탐색" data-en="Scouting TBM technologies for the project pipeline over the next ~5 years">Scouting TBM technologies for the project pipeline over the next ~5 years</li>
-          <li data-ko="국책연구과제 K-SCOUR (안전하고 편리한 지하도로 건설기술, 한국건설기술연구원 주관)" data-en="National R&amp;D — K-SCOUR: safe, convenient underground roads (led by KICT)">National R&amp;D — K-SCOUR: safe, convenient underground roads (led by KICT)</li>
-        </ul>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -390,6 +390,70 @@
       <div class="focus-item"><span class="fi-num">04</span><div class="fi-body"><span class="fi-name" data-ko="스마트 건설" data-en="Smart Construction">Smart Construction</span><span class="fi-desc" data-ko="데이터·센싱·디지털 도구로 현장을 더 안전하고 빠르게." data-en="Data, sensing and digital tools that make sites safer and faster.">Data, sensing and digital tools that make sites safer and faster.</span></div></div>
       <div class="focus-item"><span class="fi-num">05</span><div class="fi-body"><span class="fi-name" data-ko="디지털 트윈" data-en="Digital Twin">Digital Twin</span><span class="fi-desc" data-ko="가상 모델로 시설물을 모니터링하고 유지관리." data-en="Virtual models for monitoring and maintaining built assets.">Virtual models for monitoring and maintaining built assets.</span></div></div>
       <div class="focus-item"><span class="fi-num">06</span><div class="fi-body"><span class="fi-name" data-ko="지속가능성" data-en="Sustainability">Sustainability</span><span class="fi-desc" data-ko="저탄소·순환·고내구 건설 재료." data-en="Lower-carbon, recycled and longer-lasting construction materials.">Lower-carbon, recycled and longer-lasting construction materials.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PUBLICATIONS (dark) ============================== -->
+<section class="section" id="publications" data-theme="dark" aria-labelledby="pub-h">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal>
+      <span class="tick" aria-hidden="true"></span>
+      <span class="label" data-ko="논문 · 특허" data-en="Publications &amp; Patent">Publications &amp; Patent</span>
+    </div>
+    <h2 class="heading" id="pub-h" data-reveal style="--i:1" data-ko="주요 성과" data-en="Selected output">Selected output</h2>
+    <a class="cv-link" href="https://orcid.org/0009-0006-1070-7431" target="_blank" rel="noopener" data-reveal style="--i:2" data-ko="ORCID에서 전체 기록 보기 ↗" data-en="Full record on ORCID ↗">Full record on ORCID ↗</a>
+
+    <div class="pub-list">
+      <article class="pub-item" data-reveal>
+        <div class="pub-year"><span data-ko="2026.11" data-en="NOV 2026">NOV 2026</span><span class="pub-type" data-ko="저널 · 게재 확정" data-en="Journal · Accepted">Journal · Accepted</span></div>
+        <div>
+          <p class="pub-title">Assessment of two-component backfill grouting quality for TBM tail voids via scaled physical modeling: effects of injection flow rate, hardener dosage, and water-to-cement ratio</p>
+          <p class="pub-venue" data-ko="Tunnelling and Underground Space Technology · 주저자 · 게재 확정, 2026년 11월호 예정" data-en="Tunnelling and Underground Space Technology — first author, accepted; to appear Nov 2026">Tunnelling and Underground Space Technology — first author, accepted; to appear Nov 2026</p>
+        </div>
+      </article>
+
+      <article class="pub-item" data-reveal style="--i:1">
+        <div class="pub-year"><span data-ko="2025.9" data-en="SEP 2025">SEP 2025</span><span class="pub-type" data-ko="국제 학회" data-en="Conference">Conference</span></div>
+        <div>
+          <p class="pub-title">Effect of injection flow rate and Component B on quality of two-component backfill grout for TBM tail voids: scaled model experiment</p>
+          <p class="pub-venue" data-ko="TRANSOILCOLD 2025 · 주저자" data-en="TRANSOILCOLD 2025 — first author">TRANSOILCOLD 2025 — first author</p>
+          <button type="button" class="pub-badge cert-trigger" data-cert="cert-transoilcold.jpg" data-certalt="TRANSOILCOLD 2025 — Best Paper Commendation Award certificate" data-ko="★ 우수논문상" data-en="★ Best Paper Commendation Award">★ Best Paper Commendation Award</button>
+        </div>
+      </article>
+
+      <article class="pub-item" data-reveal style="--i:2">
+        <div class="pub-year"><span data-ko="2025.6" data-en="JUN 2025">JUN 2025</span><span class="pub-type" data-ko="특허" data-en="Patent">Patent</span></div>
+        <div>
+          <p class="pub-title">System for evaluating the constructability of ground-improvement methods and its operating method</p>
+          <p class="pub-venue" data-ko="출원 KR 10-2025-0072845 · 공동발명자 · 출원(심사청구)" data-en="KR application 10-2025-0072845 — co-inventor, filed (under examination)">KR application 10-2025-0072845 — co-inventor, filed (under examination)</p>
+        </div>
+      </article>
+
+      <article class="pub-item" data-reveal style="--i:3">
+        <div class="pub-year"><span data-ko="2025.4" data-en="APR 2025">APR 2025</span><span class="pub-type" data-ko="국내 학회" data-en="Conference">Conference</span></div>
+        <div>
+          <p class="pub-title">Performance evaluation of two-component backfill grout for TBM tail voids via scaled model experiments</p>
+          <p class="pub-venue" data-ko="한국터널지하공간학회 춘계학술발표회 2025 · 주저자" data-en="Korean Tunnelling &amp; Underground Space Assoc., Spring 2025 — first author">Korean Tunnelling &amp; Underground Space Assoc., Spring 2025 — first author</p>
+          <button type="button" class="pub-badge cert-trigger" data-cert="cert-kta.jpg" data-certalt="KTA 2025 — Best Paper Award certificate" data-ko="★ 최우수논문상" data-en="★ Best Paper Award">★ Best Paper Award</button>
+        </div>
+      </article>
+
+      <article class="pub-item" data-reveal style="--i:4">
+        <div class="pub-year"><span data-ko="2024.3" data-en="MAR 2024">MAR 2024</span><span class="pub-type" data-ko="국내 학회" data-en="Conference">Conference</span></div>
+        <div>
+          <p class="pub-title">Laboratory model study on the flow characteristics of two-component backfill grout for TBM</p>
+          <p class="pub-venue" data-ko="한국지반공학회 춘계학술발표회 2024 · 주저자" data-en="Korean Geotechnical Society, Spring 2024 — first author">Korean Geotechnical Society, Spring 2024 — first author</p>
+        </div>
+      </article>
+
+      <article class="pub-item" data-reveal style="--i:5">
+        <div class="pub-year"><span data-ko="2023.11" data-en="NOV 2023">NOV 2023</span><span class="pub-type" data-ko="국제 학회" data-en="Conference">Conference</span></div>
+        <div>
+          <p class="pub-title">Effect of pH on clay–bacteria interaction: a sedimentation study</p>
+          <p class="pub-venue" data-ko="제34회 KKHTCNN 토목공학 심포지엄 2023 · 주저자" data-en="34th KKHTCNN Symposium on Civil Engineering, 2023 — first author">34th KKHTCNN Symposium on Civil Engineering, 2023 — first author</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -442,70 +506,6 @@
           <p class="ri-desc" data-ko="점토를 혼합한 미생물 유도 탄산칼슘 침전(MICP) 기법으로 절리 암반을 차수하는 친환경 그라우팅 공법을 개발해, 시멘트계 그라우트 의존도를 낮춘다." data-en="Developing an eco-friendly grouting method that uses clay-mixed microbially induced calcite precipitation (MICP) to seal jointed rock masses — reducing reliance on cement-based grouts.">Developing an eco-friendly grouting method that uses clay-mixed microbially induced calcite precipitation (MICP) to seal jointed rock masses — reducing reliance on cement-based grouts.</p>
           <div class="kw-row"><span class="kw">MICP</span><span class="kw">Bio-grouting</span></div>
           <p class="ri-meta"><span class="fl" data-ko="지원" data-en="Funding">Funding</span><span class="fv" data-ko="한국연구재단" data-en="NRF">NRF</span></p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== PUBLICATIONS (dark) ============================== -->
-<section class="section" id="publications" data-theme="dark" aria-labelledby="pub-h">
-  <div class="wrap">
-    <div class="eyebrow" data-reveal>
-      <span class="tick" aria-hidden="true"></span>
-      <span class="label" data-ko="논문 · 특허" data-en="Publications &amp; Patent">Publications &amp; Patent</span>
-    </div>
-    <h2 class="heading" id="pub-h" data-reveal style="--i:1" data-ko="주요 성과" data-en="Selected output">Selected output</h2>
-    <a class="cv-link" href="https://orcid.org/0009-0006-1070-7431" target="_blank" rel="noopener" data-reveal style="--i:2" data-ko="ORCID에서 전체 기록 보기 ↗" data-en="Full record on ORCID ↗">Full record on ORCID ↗</a>
-
-    <div class="pub-list">
-      <article class="pub-item" data-reveal>
-        <div class="pub-year"><span data-ko="2025.11" data-en="NOV 2025">NOV 2025</span><span class="pub-type" data-ko="저널 · 심사 중" data-en="Journal">Journal</span></div>
-        <div>
-          <p class="pub-title">Assessment of two-component backfill grouting quality for TBM tail voids via scaled physical modeling: effects of injection flow rate, hardener dosage, and water-to-cement ratio</p>
-          <p class="pub-venue" data-ko="Tunnelling and Underground Space Technology · 주저자 · 심사 중" data-en="Tunnelling and Underground Space Technology — first author, under review">Tunnelling and Underground Space Technology — first author, under review</p>
-        </div>
-      </article>
-
-      <article class="pub-item" data-reveal style="--i:1">
-        <div class="pub-year"><span data-ko="2025.9" data-en="SEP 2025">SEP 2025</span><span class="pub-type" data-ko="국제 학회" data-en="Conference">Conference</span></div>
-        <div>
-          <p class="pub-title">Effect of injection flow rate and Component B on quality of two-component backfill grout for TBM tail voids: scaled model experiment</p>
-          <p class="pub-venue" data-ko="TRANSOILCOLD 2025 · 주저자" data-en="TRANSOILCOLD 2025 — first author">TRANSOILCOLD 2025 — first author</p>
-          <button type="button" class="pub-badge cert-trigger" data-cert="cert-transoilcold.jpg" data-certalt="TRANSOILCOLD 2025 — Best Paper Commendation Award certificate" data-ko="★ 우수논문상" data-en="★ Best Paper Commendation Award">★ Best Paper Commendation Award</button>
-        </div>
-      </article>
-
-      <article class="pub-item" data-reveal style="--i:2">
-        <div class="pub-year"><span data-ko="2025.6" data-en="JUN 2025">JUN 2025</span><span class="pub-type" data-ko="특허" data-en="Patent">Patent</span></div>
-        <div>
-          <p class="pub-title">System for evaluating the constructability of ground-improvement methods and its operating method</p>
-          <p class="pub-venue" data-ko="출원 KR 10-2025-0072845 · 공동발명자 · 출원(심사청구)" data-en="KR application 10-2025-0072845 — co-inventor, filed (under examination)">KR application 10-2025-0072845 — co-inventor, filed (under examination)</p>
-        </div>
-      </article>
-
-      <article class="pub-item" data-reveal style="--i:3">
-        <div class="pub-year"><span data-ko="2025.4" data-en="APR 2025">APR 2025</span><span class="pub-type" data-ko="국내 학회" data-en="Conference">Conference</span></div>
-        <div>
-          <p class="pub-title">Performance evaluation of two-component backfill grout for TBM tail voids via scaled model experiments</p>
-          <p class="pub-venue" data-ko="한국터널지하공간학회 춘계학술발표회 2025 · 주저자" data-en="Korean Tunnelling &amp; Underground Space Assoc., Spring 2025 — first author">Korean Tunnelling &amp; Underground Space Assoc., Spring 2025 — first author</p>
-          <button type="button" class="pub-badge cert-trigger" data-cert="cert-kta.jpg" data-certalt="KTA 2025 — Best Paper Award certificate" data-ko="★ 최우수논문상" data-en="★ Best Paper Award">★ Best Paper Award</button>
-        </div>
-      </article>
-
-      <article class="pub-item" data-reveal style="--i:4">
-        <div class="pub-year"><span data-ko="2024.3" data-en="MAR 2024">MAR 2024</span><span class="pub-type" data-ko="국내 학회" data-en="Conference">Conference</span></div>
-        <div>
-          <p class="pub-title">Laboratory model study on the flow characteristics of two-component backfill grout for TBM</p>
-          <p class="pub-venue" data-ko="한국지반공학회 춘계학술발표회 2024 · 주저자" data-en="Korean Geotechnical Society, Spring 2024 — first author">Korean Geotechnical Society, Spring 2024 — first author</p>
-        </div>
-      </article>
-
-      <article class="pub-item" data-reveal style="--i:5">
-        <div class="pub-year"><span data-ko="2023.11" data-en="NOV 2023">NOV 2023</span><span class="pub-type" data-ko="국제 학회" data-en="Conference">Conference</span></div>
-        <div>
-          <p class="pub-title">Effect of pH on clay–bacteria interaction: a sedimentation study</p>
-          <p class="pub-venue" data-ko="제34회 KKHTCNN 토목공학 심포지엄 2023 · 주저자" data-en="34th KKHTCNN Symposium on Civil Engineering, 2023 — first author">34th KKHTCNN Symposium on Civil Engineering, 2023 — first author</p>
         </div>
       </article>
     </div>
@@ -575,7 +575,11 @@
           <div class="cred-v" data-ko="영어 OPIc IH · 한국어(모국어)" data-en="English — OPIc IH · Korean (native)">English — OPIc IH · Korean (native)</div>
         </div>
         <div class="cred-item">
-          <div class="cred-k" data-ko="도구" data-en="Tools">Tools</div>
+          <div class="cred-k" data-ko="지반해석 S/W" data-en="Geotechnical software">Geotechnical software</div>
+          <div class="cred-v">PLAXIS 2D/3D · GTS NX (MIDAS) · Soilworks (MIDAS) · Leapfrog</div>
+        </div>
+        <div class="cred-item">
+          <div class="cred-k" data-ko="프로그래밍 · 도구" data-en="Programming &amp; tools">Programming &amp; tools</div>
           <div class="cred-v">Python · MATLAB · ABAQUS · AutoCAD</div>
         </div>
       </div>
