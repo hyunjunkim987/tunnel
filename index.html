@@ -177,6 +177,12 @@
   html[data-lang="ko"] .pub-venue{font-family:var(--kr);letter-spacing:.01em;font-size:13.5px}
   .pub-badge{display:inline-block;margin-top:13px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:100px;padding:4px 11px}
   html[data-lang="ko"] .pub-badge{font-family:var(--kr);text-transform:none;letter-spacing:.02em;font-size:12.5px}
+  .pub-actions{margin-top:12px;display:flex;flex-wrap:wrap;gap:18px}
+  .pub-actions .dl{margin:0}
+  .now-group{margin-top:clamp(44px,7vh,80px)}
+  .skills-grid{display:grid;grid-template-columns:1fr;gap:clamp(6px,1.5vh,14px);margin-top:clamp(10px,2vh,20px)}
+  .skills-col .cv-group-label{margin:clamp(26px,4vh,40px) 0 12px}
+  .skills-col .kw-row{margin-top:0}
 
   /* ============================== CV ============================== */
   .cv-block{margin-top:clamp(24px,4vh,44px)}
@@ -260,6 +266,7 @@
     <a class="nav-link" href="#focus" data-ko="집중 분야" data-en="Focus">Focus</a>
     <a class="nav-link" href="#publications" data-ko="성과" data-en="Output">Output</a>
     <a class="nav-link" href="#research" data-ko="연구" data-en="Research">Research</a>
+    <a class="nav-link" href="#skills" data-ko="역량" data-en="Skills">Skills</a>
     <a class="nav-link" href="#cv" data-ko="경력" data-en="Experience">Experience</a>
     <a class="nav-link" href="#contact" data-ko="연락처" data-en="Contact">Contact</a>
   </div>
@@ -317,7 +324,7 @@
     <img class="hero-avatar" src="profile.jpg?v=2" alt="Hyun-Jun Kim" />
     <p class="hero-kicker" data-ko="GS건설 지반터널팀 연구원 · 터널 · TBM" data-en="RESEARCH ENGINEER · GS E&amp;C · GEOTECHNICAL &amp; TUNNEL">RESEARCH ENGINEER · GS E&amp;C · GEOTECHNICAL &amp; TUNNEL</p>
     <h1 class="name" data-ko="김현준" data-en="Hyun-Jun Kim">Hyun-Jun Kim</h1>
-    <p class="hero-mission" data-ko="GS건설 R&amp;D 센터에서 TBM 데이터와 설계 검토, 그리고 막장 사이를 오간다. 더 안전하고 생산적인 터널을 위해." data-en="At GS E&amp;C's R&amp;D center I move between TBM data, design review and the tunnel face — for safer, more productive tunnels.">At GS E&amp;C's R&amp;D center I move between TBM data, design review and the tunnel face — for safer, more productive tunnels.</p>
+    <p class="hero-mission" data-ko="GS건설 미래기술원에서 TBM 시공 데이터를 현장이 바로 쓰는 엔지니어링 도구로 바꾸고, 그 결과를 막장에서 확인한다." data-en="At GS E&amp;C's R&amp;D institute I turn TBM construction data into engineering tools that practitioners actually use — and stand behind them at the tunnel face.">At GS E&amp;C's R&amp;D institute I turn TBM construction data into engineering tools that practitioners actually use — and stand behind them at the tunnel face.</p>
     <a class="scroll-cue" href="#mission">
       <span data-ko="스크롤" data-en="SCROLL">SCROLL</span>
       <span class="chev" aria-hidden="true"></span>
@@ -335,28 +342,80 @@
       <span class="label" data-ko="현재 · GS건설" data-en="Now · GS E&amp;C">Now · GS E&amp;C</span>
     </div>
     <h2 class="heading" id="now-h" data-reveal style="--i:1" data-ko="연구와 현장 사이에서" data-en="Between research and the field">Between research and the field</h2>
-    <p class="now-intro" data-reveal style="--i:2" data-ko="GS건설 지반터널팀(R&amp;D 센터) 연구원. TBM 운전 데이터 분석에서 설계 검토, 그리고 막장까지, 해석이 현장에서 통해야 하는 일을 한다." data-en="Research engineer in GS E&amp;C's Geotechnical &amp; Tunnel Team (R&amp;D center). My work runs from TBM operation data to design review to the tunnel face — where the analysis has to hold up on site.">Research engineer in GS E&amp;C's Geotechnical &amp; Tunnel Team (R&amp;D center). My work runs from TBM operation data to design review to the tunnel face — where the analysis has to hold up on site.</p>
+    <p class="now-intro" data-reveal style="--i:2" data-ko="GS건설 미래기술원 지반터널팀 연구원. 연간 업무의 절반가량은 TBM·NATM 터널 현장 기술지원에, 나머지는 TBM 시공 데이터를 분석해 현장이 바로 쓰는 엔지니어링 도구와 디지털 플랫폼으로 만드는 연구개발에 쓴다." data-en="Research engineer in the Geotechnical &amp; Tunnel Team at GS E&amp;C's R&amp;D institute. About half of my year goes to technical support for TBM and NATM tunnel sites; the rest to R&amp;D — analysing TBM construction data and turning it into engineering tools and a digital platform that practitioners actually use.">Research engineer in the Geotechnical &amp; Tunnel Team at GS E&amp;C's R&amp;D institute. About half of my year goes to technical support for TBM and NATM tunnel sites; the rest to R&amp;D — analysing TBM construction data and turning it into engineering tools and a digital platform that practitioners actually use.</p>
 
+    <p class="cv-group-label now-group" data-reveal data-ko="연구개발 (2026)" data-en="Research &amp; development (2026)">Research &amp; development (2026)</p>
     <div class="research-list">
       <article class="research-item" data-reveal>
         <div class="ri-index" aria-hidden="true" data-parallax="-0.05">01</div>
         <div>
-          <h3 class="ri-title" data-ko="TBM 생산성 개선" data-en="TBM productivity improvement">TBM productivity improvement</h3>
-          <p class="ri-desc" data-ko="TBM 굴진 및 장비 운전(Operation) 데이터를 분석해 손실 시간을 찾아내고, 생산성을 높이는 개선안을 도출한다." data-en="Analysing TBM advance and equipment operation data to locate lost time and raise productivity on active drives.">Analysing TBM advance and equipment operation data to locate lost time and raise productivity on active drives.</p>
+          <h3 class="ri-title" data-ko="소단면 TBM 기술 탐색 및 핵심기술 확보전략 (2026–27)" data-en="Small-diameter TBM — technology scouting and core-technology strategy (2026–27)">Small-diameter TBM — technology scouting and core-technology strategy (2026–27)</h3>
+          <p class="ri-desc" data-ko="전력구·통신구용 소단면 TBM과 트렌치리스 공법(마이크로터널링·파이프재킹·HDD)의 국내외 기술을 조사하고, 장비 제작사·전문시공사 인터뷰로 기술 데이터베이스를 구축한다. 실제 전력구 TBM 굴진 데이터를 분석하고, 뒷채움 후속주입 자동화 같은 차세대 요소기술 후보를 발굴한다." data-en="Surveying domestic and international small-diameter TBM and trenchless technologies (microtunnelling, pipe jacking, HDD) for utility and power tunnels; interviewing manufacturers and specialist contractors to build a technology database; analysing operation data from active power-tunnel drives; identifying next-generation candidates such as automated backfill grouting.">Surveying domestic and international small-diameter TBM and trenchless technologies (microtunnelling, pipe jacking, HDD) for utility and power tunnels; interviewing manufacturers and specialist contractors to build a technology database; analysing operation data from active power-tunnel drives; identifying next-generation candidates such as automated backfill grouting.</p>
+          <div class="kw-row"><span class="kw">Technology scouting</span><span class="kw">Trenchless methods</span><span class="kw">Operation data</span><span class="kw">Technology database</span></div>
         </div>
       </article>
       <article class="research-item" data-reveal style="--i:1">
         <div class="ri-index" aria-hidden="true" data-parallax="-0.05">02</div>
         <div>
-          <h3 class="ri-title" data-ko="사전설계도서 검토" data-en="Preliminary design review">Preliminary design review</h3>
-          <p class="ri-desc" data-ko="시공 전 설계도서를 검토해 지반 조건, 터널 지보, 시공성을 점검한다." data-en="Reviewing design documents ahead of construction — ground conditions, tunnel support and constructability.">Reviewing design documents ahead of construction — ground conditions, tunnel support and constructability.</p>
+          <h3 class="ri-title" data-ko="TBM 터널 Engineering Tool 개발 및 Digital Platform 구축 (2025–26)" data-en="TBM tunnel engineering tools and digital platform (2025–26)">TBM tunnel engineering tools and digital platform (2025–26)</h3>
+          <p class="ri-desc" data-ko="TBM 터널의 설계·견적·시공관리 전 단계를 지원하는 표준 엔지니어링 도구(2025년 12종, 2026년 6종)를 개발해 하나의 디지털 플랫폼으로 통합한다. TBM Production Tracking(실제 TBM 현장 굴진 데이터 주간 분석, 다운타임과 원인 정량화)을 담당하고, Tunnel Cross Section 도구를 공동 개발했으며, AI 기반 생산성 분석 웹앱과 「Tunneling Engineering Suite」 프로토타입 개발에 참여했다." data-en="Standardised engineering tools spanning design, estimation and construction management of TBM tunnels — 12 delivered in 2025 and 6 more in 2026 — integrated into one digital platform. I own TBM Production Tracking (weekly analysis of advance data on a live TBM site, quantifying downtime and its causes), co-developed the tunnel cross-section space-proofing tool, built an AI-assisted productivity web app and contributed to the &ldquo;Tunneling Engineering Suite&rdquo; prototype.">Standardised engineering tools spanning design, estimation and construction management of TBM tunnels — 12 delivered in 2025 and 6 more in 2026 — integrated into one digital platform. I own TBM Production Tracking (weekly analysis of advance data on a live TBM site, quantifying downtime and its causes), co-developed the tunnel cross-section space-proofing tool, built an AI-assisted productivity web app and contributed to the &ldquo;Tunneling Engineering Suite&rdquo; prototype.</p>
+          <div class="kw-row"><span class="kw">Productivity Forecast</span><span class="kw">Production Tracking</span><span class="kw">Face Stability &amp; Face Pressure</span><span class="kw">Segment Production Planning</span><span class="kw">Quantity Takeoff</span><span class="kw">Lining Design</span><span class="kw">Alignment Optimisation</span><span class="kw">Space Proofing</span><span class="kw">Thrust Force</span></div>
         </div>
       </article>
       <article class="research-item" data-reveal style="--i:2">
         <div class="ri-index" aria-hidden="true" data-parallax="-0.05">03</div>
         <div>
-          <h3 class="ri-title" data-ko="현장 기술지원" data-en="On-site technical support">On-site technical support</h3>
-          <p class="ri-desc" data-ko="막장 암판정, 계측값 1차 관리기준치 초과 시 대책 수립, 비탈면 안정성 검토, GPR·TSP 물리탐사, 의견검토서 작성." data-en="Rock-mass classification at the face, countermeasures when monitoring exceeds Level-1 management thresholds, slope stability review, GPR and TSP geophysical surveys, and technical opinion reports.">Rock-mass classification at the face, countermeasures when monitoring exceeds Level-1 management thresholds, slope stability review, GPR and TSP geophysical surveys, and technical opinion reports.</p>
+          <h3 class="ri-title" data-ko="지하도로 건설 기술 개발 국가 R&amp;D 과제 (2026–30)" data-en="National R&amp;D — safe and convenient underground roads (2026–30)">National R&amp;D — safe and convenient underground roads (2026–30)</h3>
+          <p class="ri-desc" data-ko="5개년 국가 연구개발 과제로, 소속 기관은 지하도로 복합화·효율화 기술과 실증(Test-Bed) 부문을 담당한다. 연구행정을 맡으며, NATM 배수/비배수 설계기준 조사, 세그먼트 방수·접합부 기술자료 수집, 터널 프리캐스트 기술과 NATM/TBM 방배수 연계기술 조사를 수행한다." data-en="A five-year national programme; our work package covers hybridisation and efficiency technologies for underground roads and the associated test-bed. I handle research administration, survey drained/undrained NATM design standards, compile references on segment waterproofing and joints, and study precast tunnel technology and integrated NATM/TBM waterproofing and drainage.">A five-year national programme; our work package covers hybridisation and efficiency technologies for underground roads and the associated test-bed. I handle research administration, survey drained/undrained NATM design standards, compile references on segment waterproofing and joints, and study precast tunnel technology and integrated NATM/TBM waterproofing and drainage.</p>
+          <div class="kw-row"><span class="kw">Precast tunnel</span><span class="kw">Waterproofing &amp; drainage</span><span class="kw">NATM / TBM integration</span><span class="kw">Test-bed</span></div>
+        </div>
+      </article>
+    </div>
+
+    <p class="cv-group-label now-group" data-reveal data-ko="현장 기술지원 (업무의 약 50%)" data-en="Field engineering support (about half of my time)">Field engineering support (about half of my time)</p>
+    <div class="research-list">
+      <article class="research-item" data-reveal>
+        <div class="ri-index" aria-hidden="true" data-parallax="-0.05">04</div>
+        <div>
+          <h3 class="ri-title" data-ko="TBM 터널 현장" data-en="TBM tunnel sites">TBM tunnel sites</h3>
+          <p class="ri-desc" data-ko="대심도 전력구 TBM의 본굴진 시공관리와 트러블 대응, 뒷채움재 재료 변경 기술검토, 굴진 생산성 분석 보고와 현장 정기 피드백, 장비 사양 검토·Launching·초기굴진 지원, 수직구 후방터널 연장 안정성 검토, 해외 대심도 철도 TBM의 생산성·리스크 검토, 2주간 TBM 현장 OJT. 사전설계도서 검토와 계측 데이터가 관리기준을 초과할 때의 대응도 함께 맡는다." data-en="Main-drive construction management and troubleshooting on a deep power-tunnel TBM; technical review of a backfill-material change; productivity reporting with regular site feedback; TBM specification review, launching and initial-drive support; stability review for a shaft back-tunnel extension; productivity and risk review for an overseas deep-rail TBM; a two-week site OJT. Preliminary design review and response when monitoring data exceeds management thresholds are part of the job.">Main-drive construction management and troubleshooting on a deep power-tunnel TBM; technical review of a backfill-material change; productivity reporting with regular site feedback; TBM specification review, launching and initial-drive support; stability review for a shaft back-tunnel extension; productivity and risk review for an overseas deep-rail TBM; a two-week site OJT. Preliminary design review and response when monitoring data exceeds management thresholds are part of the job.</p>
+        </div>
+      </article>
+      <article class="research-item" data-reveal style="--i:1">
+        <div class="ri-index" aria-hidden="true" data-parallax="-0.05">05</div>
+        <div>
+          <h3 class="ri-title" data-ko="NATM 터널 현장" data-en="NATM tunnel sites">NATM tunnel sites</h3>
+          <p class="ri-desc" data-ko="광역철도 NATM 현장에서 연결터널 록볼트 경사시공 기술검토, 막장관찰(Face Mapping)과 AI 기반 막장 매핑 적용, 터널 전방 예측 탐사(TSP) 수행, NATM 시공 프로세스 전반의 현장 확인." data-en="On regional-rail NATM sites: technical review of inclined rock-bolt installation in a cross passage, tunnel face mapping and AI-based face mapping, TSP look-ahead surveys, and hands-on understanding of the full NATM cycle.">On regional-rail NATM sites: technical review of inclined rock-bolt installation in a cross passage, tunnel face mapping and AI-based face mapping, TSP look-ahead surveys, and hands-on understanding of the full NATM cycle.</p>
+        </div>
+      </article>
+      <article class="research-item" data-reveal style="--i:2">
+        <div class="ri-index" aria-hidden="true" data-parallax="-0.05">06</div>
+        <div>
+          <h3 class="ri-title" data-ko="건축·주택 현장 및 물리탐사" data-en="Buildings, housing and geophysical survey">Buildings, housing and geophysical survey</h3>
+          <p class="ri-desc" data-ko="콘크리트 양생 중 발파진동 영향 검토, 다수 현장 암판정, 비탈면 안정성 검토. GPR 탐사(도심 공동주택 현장, 도로 포장 침하 조사)와 TSP 탐사를 수행하며 팀의 GPR·TSP 장비 운영을 담당한다. TBM 시공 안전개선(DFS) 아이템 발굴에도 참여한다." data-en="Blasting-vibration assessment during concrete curing, rock-mass classification across multiple sites and slope stability review. GPR surveys (urban housing sites, pavement settlement) and TSP, as the team's GPR/TSP equipment lead; plus Design-for-Safety items for TBM construction.">Blasting-vibration assessment during concrete curing, rock-mass classification across multiple sites and slope stability review. GPR surveys (urban housing sites, pavement settlement) and TSP, as the team's GPR/TSP equipment lead; plus Design-for-Safety items for TBM construction.</p>
+        </div>
+      </article>
+    </div>
+
+    <p class="cv-group-label now-group" data-reveal data-ko="스마트 기술 현장 적용" data-en="Smart technology deployment">Smart technology deployment</p>
+    <div class="research-list">
+      <article class="research-item" data-reveal>
+        <div class="ri-index" aria-hidden="true" data-parallax="-0.05">07</div>
+        <div>
+          <h3 class="ri-title" data-ko="도구에서 막장까지" data-en="From tools to the tunnel face">From tools to the tunnel face</h3>
+          <p class="ri-desc" data-ko="대심도 전력구 TBM 현장에서 운영 중인 TBM Production Tracking(생산성·다운타임 정량화), 광역철도 NATM 현장의 AI 기반 막장 매핑과 상용 3D 막장 매핑 시스템 비교 평가(워크플로우·AI 비전 파이프라인·현장 적용성), TSP 전방 예측 탐사, 터널 로보틱스 기술 탐색." data-en="TBM Production Tracking running on a live deep power-tunnel TBM (quantified productivity and downtime); AI-based tunnel face mapping on a regional-rail NATM site with a comparative review of commercial 3D face-mapping systems (workflow, AI-vision pipeline, field applicability); TSP look-ahead surveys; scouting of tunnel robotics.">TBM Production Tracking running on a live deep power-tunnel TBM (quantified productivity and downtime); AI-based tunnel face mapping on a regional-rail NATM site with a comparative review of commercial 3D face-mapping systems (workflow, AI-vision pipeline, field applicability); TSP look-ahead surveys; scouting of tunnel robotics.</p>
+          <div class="kw-row"><span class="kw">TBM Production Tracking</span><span class="kw">AI face mapping</span><span class="kw">TSP</span><span class="kw">Tunnel robotics</span></div>
+        </div>
+      </article>
+    </div>
+
+    <p class="cv-group-label now-group" data-reveal data-ko="지식관리 · 디지털 워크플로우" data-en="Knowledge &amp; digital workflow">Knowledge &amp; digital workflow</p>
+    <div class="research-list">
+      <article class="research-item" data-reveal>
+        <div class="ri-index" aria-hidden="true" data-parallax="-0.05">08</div>
+        <div>
+          <h3 class="ri-title" data-ko="엔지니어링 지식을 재사용 가능하게" data-en="Making engineering knowledge reusable">Making engineering knowledge reusable</h3>
+          <p class="ri-desc" data-ko="일정·회의록·업무현황·기술자료를 통합한 업무 대시보드, 팀 회의·업체 인터뷰·교육 세션 기록을 표준화하는 AI 회의록 워크플로우, 기술조사 결과의 검색 가능한 데이터베이스화, 현장 단위 기술지원 이력을 정리하는 사내 기술 아카이브 구축 참여." data-en="An integrated work dashboard consolidating schedules, meeting records, task status and technical references; an AI-assisted meeting-notes workflow that standardises records of team meetings, vendor interviews and training sessions; technology-scouting results structured into searchable databases; contribution to an internal technical archive organising support history by site.">An integrated work dashboard consolidating schedules, meeting records, task status and technical references; an AI-assisted meeting-notes workflow that standardises records of team meetings, vendor interviews and training sessions; technology-scouting results structured into searchable databases; contribution to an internal technical archive organising support history by site.</p>
         </div>
       </article>
     </div>
@@ -384,12 +443,12 @@
     </div>
     <h2 class="heading" id="focus-h" data-reveal style="--i:1" data-ko="내가 다루는 것" data-en="What I work on">What I work on</h2>
     <div class="focus-grid" data-reveal style="--i:2">
-      <div class="focus-item"><span class="fi-num">01</span><div class="fi-body"><span class="fi-name" data-ko="지하 공간" data-en="Underground Space">Underground Space</span><span class="fi-desc" data-ko="터널·수직구 등 지표 아래에 만드는 공간." data-en="Tunnels, shafts and the usable space we open beneath the surface.">Tunnels, shafts and the usable space we open beneath the surface.</span></div></div>
-      <div class="focus-item"><span class="fi-num">02</span><div class="fi-body"><span class="fi-name" data-ko="TBM · 쉴드 터널" data-en="TBM &amp; Shield Tunnelling">TBM &amp; Shield Tunnelling</span><span class="fi-desc" data-ko="쉴드 TBM과 세그먼트 라이닝을 이용한 기계화 굴착." data-en="Mechanized excavation with shield TBMs and segmental linings.">Mechanized excavation with shield TBMs and segmental linings.</span></div></div>
-      <div class="focus-item"><span class="fi-num">03</span><div class="fi-body"><span class="fi-name" data-ko="지반공학" data-en="Geotechnical Engineering">Geotechnical Engineering</span><span class="fi-desc" data-ko="흙과 암반의 거동, 그리고 그 위와 속에 짓는 방법." data-en="How soil and rock behave — and how to build on and through them.">How soil and rock behave — and how to build on and through them.</span></div></div>
-      <div class="focus-item"><span class="fi-num">04</span><div class="fi-body"><span class="fi-name" data-ko="스마트 건설" data-en="Smart Construction">Smart Construction</span><span class="fi-desc" data-ko="데이터·센싱·디지털 도구로 현장을 더 안전하고 빠르게." data-en="Data, sensing and digital tools that make sites safer and faster.">Data, sensing and digital tools that make sites safer and faster.</span></div></div>
-      <div class="focus-item"><span class="fi-num">05</span><div class="fi-body"><span class="fi-name" data-ko="디지털 트윈" data-en="Digital Twin">Digital Twin</span><span class="fi-desc" data-ko="가상 모델로 시설물을 모니터링하고 유지관리." data-en="Virtual models for monitoring and maintaining built assets.">Virtual models for monitoring and maintaining built assets.</span></div></div>
-      <div class="focus-item"><span class="fi-num">06</span><div class="fi-body"><span class="fi-name" data-ko="지속가능성" data-en="Sustainability">Sustainability</span><span class="fi-desc" data-ko="저탄소·순환·고내구 건설 재료." data-en="Lower-carbon, recycled and longer-lasting construction materials.">Lower-carbon, recycled and longer-lasting construction materials.</span></div></div>
+      <div class="focus-item"><span class="fi-num">01</span><div class="fi-body"><span class="fi-name" data-ko="TBM 터널" data-en="TBM tunnelling">TBM tunnelling</span><span class="fi-desc" data-ko="쉴드·소단면 TBM 시공 기술지원과 생산성 분석." data-en="Shield and small-diameter TBM: construction support and productivity analysis.">Shield and small-diameter TBM: construction support and productivity analysis.</span></div></div>
+      <div class="focus-item"><span class="fi-num">02</span><div class="fi-body"><span class="fi-name" data-ko="NATM 터널" data-en="NATM tunnelling">NATM tunnelling</span><span class="fi-desc" data-ko="막장관찰, 암판정, 전방 예측 물리탐사(TSP·GPR)." data-en="Face mapping, rock-mass classification and look-ahead geophysics (TSP, GPR).">Face mapping, rock-mass classification and look-ahead geophysics (TSP, GPR).</span></div></div>
+      <div class="focus-item"><span class="fi-num">03</span><div class="fi-body"><span class="fi-name" data-ko="엔지니어링 도구 · 디지털 플랫폼" data-en="Engineering tools &amp; digital platforms">Engineering tools &amp; digital platforms</span><span class="fi-desc" data-ko="시공 데이터를 현장이 바로 쓰는 표준 도구로 바꾸는 일." data-en="Turning construction data into standardised tools practitioners actually use.">Turning construction data into standardised tools practitioners actually use.</span></div></div>
+      <div class="focus-item"><span class="fi-num">04</span><div class="fi-body"><span class="fi-name" data-ko="AI · 데이터 기반 시공관리" data-en="AI &amp; data-driven construction">AI &amp; data-driven construction</span><span class="fi-desc" data-ko="생산성 모델링, AI 막장 매핑, LLM 기반 엔지니어링 워크플로우." data-en="Productivity modelling, AI face mapping and LLM-assisted engineering workflows.">Productivity modelling, AI face mapping and LLM-assisted engineering workflows.</span></div></div>
+      <div class="focus-item"><span class="fi-num">05</span><div class="fi-body"><span class="fi-name" data-ko="뒷채움 그라우팅 · 터널 재료" data-en="Backfill grouting &amp; tunnel materials">Backfill grouting &amp; tunnel materials</span><span class="fi-desc" data-ko="테일보이드 그라우트 품질: 축소 모형부터 실규모 주입 실험까지." data-en="Tail-void grout quality — from scaled models to full-scale injection tests.">Tail-void grout quality — from scaled models to full-scale injection tests.</span></div></div>
+      <div class="focus-item"><span class="fi-num">06</span><div class="fi-body"><span class="fi-name" data-ko="지반공학" data-en="Geotechnical engineering">Geotechnical engineering</span><span class="fi-desc" data-ko="비탈면 안정, 발파진동, 지반조사, 터널 방배수." data-en="Slope stability, blasting vibration, ground investigation, tunnel waterproofing and drainage.">Slope stability, blasting vibration, ground investigation, tunnel waterproofing and drainage.</span></div></div>
     </div>
   </div>
 </section>
@@ -406,10 +465,27 @@
 
     <div class="pub-list">
       <article class="pub-item" data-reveal>
-        <div class="pub-year"><span data-ko="2026.11" data-en="NOV 2026">NOV 2026</span><span class="pub-type" data-ko="저널 · 게재 확정" data-en="Journal · Accepted">Journal · Accepted</span></div>
+        <div class="pub-year"><span data-ko="2026.11" data-en="NOV 2026">NOV 2026</span><span class="pub-type" data-ko="저널 · 게재" data-en="Journal · Published">Journal · Published</span></div>
         <div>
           <p class="pub-title">Assessment of two-component backfill grouting quality for TBM tail voids via scaled physical modeling: effects of injection flow rate, hardener dosage, and water-to-cement ratio</p>
-          <p class="pub-venue" data-ko="Tunnelling and Underground Space Technology · 주저자 · 게재 확정, 2026년 11월호 예정" data-en="Tunnelling and Underground Space Technology — first author, accepted; to appear Nov 2026">Tunnelling and Underground Space Technology — first author, accepted; to appear Nov 2026</p>
+          <p class="pub-venue" data-ko="Tunnelling and Underground Space Technology 177권 (2026년 11월호), 107958 · 주저자 · 2026년 7월 온라인 게재" data-en="Tunnelling and Underground Space Technology 177 (Nov 2026), 107958 — first author · online Jul 2026">Tunnelling and Underground Space Technology 177 (Nov 2026), 107958 — first author · online Jul 2026</p>
+          <div class="pub-actions"><a class="dl" href="https://doi.org/10.1016/j.tust.2026.107958" target="_blank" rel="noopener">DOI 10.1016/j.tust.2026.107958&nbsp;<span class="ar" aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+
+      <article class="pub-item" data-reveal style="--i:1">
+        <div class="pub-year"><span data-ko="2026" data-en="2026">2026</span><span class="pub-type" data-ko="국내 학회" data-en="Conference">Conference</span></div>
+        <div>
+          <p class="pub-title">Evaluation of backfill grout filling in TBM tail voids: physical modelling</p>
+          <p class="pub-venue" data-ko="한국터널지하공간학회 학술발표회 2026 · 주저자 · 「TBM 테일보이드 뒷채움재 그라우트의 채움 평가: 모형실험」" data-en="Korean Tunnelling &amp; Underground Space Assoc., 2026 — first author">Korean Tunnelling &amp; Underground Space Assoc., 2026 — first author</p>
+        </div>
+      </article>
+
+      <article class="pub-item" data-reveal style="--i:2">
+        <div class="pub-year"><span data-ko="2026" data-en="2026">2026</span><span class="pub-type" data-ko="국내 학회" data-en="Conference">Conference</span></div>
+        <div>
+          <p class="pub-title">Machine-learning-based prediction of shield TBM disc cutter life</p>
+          <p class="pub-venue" data-ko="한국터널지하공간학회 학술발표회 2026 · 공동저자 · 「기계학습을 이용한 쉴드 TBM 디스크커터 수명 예측」" data-en="Korean Tunnelling &amp; Underground Space Assoc., 2026 — co-author (team presentation)">Korean Tunnelling &amp; Underground Space Assoc., 2026 — co-author (team presentation)</p>
         </div>
       </article>
 
@@ -512,6 +588,31 @@
   </div>
 </section>
 
+<!-- ============================== SKILLS (dark) ============================== -->
+<section class="section" id="skills" data-theme="dark" aria-labelledby="skills-h">
+  <div class="wrap">
+    <div class="eyebrow" data-reveal>
+      <span class="tick" aria-hidden="true"></span>
+      <span class="label" data-ko="역량" data-en="Skills">Skills</span>
+    </div>
+    <h2 class="heading" id="skills-h" data-reveal style="--i:1" data-ko="가지고 있는 도구들" data-en="What I bring to the table">What I bring to the table</h2>
+    <div class="skills-grid">
+      <div class="skills-col" data-reveal style="--i:2">
+        <p class="cv-group-label" data-ko="터널 · 지반" data-en="Tunnelling &amp; geotechnics">Tunnelling &amp; geotechnics</p>
+        <div class="kw-row"><span class="kw">Shield TBM</span><span class="kw">Small-diameter TBM</span><span class="kw">Segment lining</span><span class="kw">Backfill grouting</span><span class="kw">NATM</span><span class="kw">Face mapping &amp; rock-mass classification</span><span class="kw">Blasting vibration assessment</span><span class="kw">Slope stability</span><span class="kw">Ground investigation</span><span class="kw">Tunnel waterproofing &amp; drainage</span><span class="kw">Precast tunnel lining</span></div>
+      </div>
+      <div class="skills-col" data-reveal style="--i:3">
+        <p class="cv-group-label" data-ko="디지털 · 데이터" data-en="Digital &amp; data">Digital &amp; data</p>
+        <div class="kw-row"><span class="kw">Engineering tool development</span><span class="kw">Construction data analytics</span><span class="kw">Productivity modelling</span><span class="kw">Web-based engineering apps</span><span class="kw">AI / LLM in engineering workflows</span><span class="kw">BIM fundamentals</span><span class="kw">Knowledge-base architecture</span></div>
+      </div>
+      <div class="skills-col" data-reveal style="--i:4">
+        <p class="cv-group-label" data-ko="연구" data-en="Research">Research</p>
+        <div class="kw-row"><span class="kw">Scaled physical modelling</span><span class="kw">Material property testing</span><span class="kw">Technology scouting &amp; benchmarking</span><span class="kw">National R&amp;D administration</span><span class="kw">Academic writing</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================== CV ============================== -->
 <section class="section" id="cv" data-theme="light" aria-labelledby="cv-h">
   <div class="wrap">
@@ -526,7 +627,7 @@
       <p class="cv-group-label" data-reveal data-ko="경력" data-en="Experience">Experience</p>
       <div class="cv-row" data-reveal>
         <span class="cv-year" data-ko="2026 – 현재" data-en="2026 – present">2026 – present</span>
-        <span class="cv-role"><span data-ko="GS건설 · R.I.F Tech. 연구원" data-en="Research Engineer — GS E&amp;C, R.I.F Tech.">Research Engineer — GS E&amp;C, R.I.F Tech.</span><span class="cv-note" data-ko="지반터널팀, 기반기술연구센터" data-en="Geotechnical &amp; Tunnel Engineering Team, Fundamental Technology Research Center">Geotechnical &amp; Tunnel Engineering Team, Fundamental Technology Research Center</span></span>
+        <span class="cv-role"><span data-ko="GS건설 · R.I.F Tech. 연구원" data-en="Research Engineer — GS E&amp;C, R.I.F Tech.">Research Engineer — GS E&amp;C, R.I.F Tech.</span><span class="cv-note" data-ko="지반터널팀 · 기반기술연구센터 · 미래기술원" data-en="Geotechnical &amp; Tunnel Team · Infrastructure Technology Research Center · R&amp;D Institute">Geotechnical &amp; Tunnel Team · Infrastructure Technology Research Center · R&amp;D Institute</span></span>
         <span class="cv-gpa" data-ko="서울, 대한민국" data-en="Seoul, Republic of Korea">Seoul, Republic of Korea</span>
       </div>
       <div class="cv-row" data-reveal>
@@ -536,7 +637,7 @@
       </div>
       <div class="cv-row" data-reveal>
         <span class="cv-year" data-ko="2025.4 – 8" data-en="APR – AUG 2025">APR – AUG 2025</span>
-        <span class="cv-role"><span data-ko="KAIST · 연구원" data-en="Researcher — KAIST">Researcher — KAIST</span><span class="cv-note" data-ko="지반에너지연구실 · 모형·실대형 실험 수행 및 결과 분석" data-en="Geo-Energy Lab — model &amp; large-scale experiments, data analysis">Geo-Energy Lab — model &amp; large-scale experiments, data analysis</span></span>
+        <span class="cv-role"><span data-ko="KAIST · 연구원" data-en="Researcher — KAIST">Researcher — KAIST</span><span class="cv-note" data-ko="지반에너지연구실 · 실규모 토조와 시공용 펌프를 이용한 뒷채움 주입 모형실험" data-en="Geo-Energy Lab — full-scale soil-tank backfill-injection model tests with a site-grade grout pump">Geo-Energy Lab — full-scale soil-tank backfill-injection model tests with a site-grade grout pump</span></span>
         <span class="cv-gpa" data-ko="대전, 대한민국" data-en="Daejeon, Republic of Korea">Daejeon, Republic of Korea</span>
       </div>
 
@@ -562,6 +663,28 @@
         <span class="cv-year" data-ko="2025.4" data-en="APR 2025">APR 2025</span>
         <button type="button" class="cv-role cert-honor" data-cert="cert-kta.jpg" data-certalt="KTA 2025 — Best Paper Award certificate" data-ko="최우수논문상" data-en="Best Paper Award">Best Paper Award</button>
         <span class="cv-gpa" data-ko="한국터널지하공간학회" data-en="KTA">KTA</span>
+      </div>
+
+      <p class="cv-group-label" data-reveal data-ko="교육 · 강의" data-en="Training &amp; teaching">Training &amp; teaching</p>
+      <div class="cv-row" data-reveal>
+        <span class="cv-year">2026</span>
+        <span class="cv-role" data-ko="사내 기술교육 「Rock Slope Engineering」 모듈 강의자료 작성 및 강의" data-en="Authored and taught the internal training module &ldquo;Rock Slope Engineering&rdquo;">Authored and taught the internal training module &ldquo;Rock Slope Engineering&rdquo;</span>
+        <span class="cv-gpa" data-ko="GS건설" data-en="GS E&amp;C">GS E&amp;C</span>
+      </div>
+      <div class="cv-row" data-reveal>
+        <span class="cv-year">2026</span>
+        <span class="cv-role" data-ko="전사 기술아카데미 참여 (본사 강의 및 TBM 현장 교육)" data-en="Company-wide technical academy — HQ lecture and TBM site session">Company-wide technical academy — HQ lecture and TBM site session</span>
+        <span class="cv-gpa" data-ko="GS건설" data-en="GS E&amp;C">GS E&amp;C</span>
+      </div>
+      <div class="cv-row" data-reveal>
+        <span class="cv-year">2026</span>
+        <span class="cv-role" data-ko="대단면 TBM 시공 매뉴얼 작성 (진행 중)" data-en="Large-diameter TBM construction manual (in progress)">Large-diameter TBM construction manual (in progress)</span>
+        <span class="cv-gpa" data-ko="전문기술 역량확보" data-en="Professional development">Professional development</span>
+      </div>
+      <div class="cv-row" data-reveal>
+        <span class="cv-year">2026</span>
+        <span class="cv-role" data-ko="이수 교육: 터널설계(암반역학·지보·연약지반), Eurocode 기반 지반설계, 한국지반공학회 실무·계속교육, GPR 실무, BIM 기초, 가시설 설계" data-en="Training completed: tunnel design (rock mechanics, ground support, soft-ground), Eurocode geotechnical design, KGS practical courses, GPR practice, BIM fundamentals, temporary-works design">Training completed: tunnel design (rock mechanics, ground support, soft-ground), Eurocode geotechnical design, KGS practical courses, GPR practice, BIM fundamentals, temporary-works design</span>
+        <span class="cv-gpa" data-ko="교육 이수" data-en="Courses">Courses</span>
       </div>
 
       <p class="cv-group-label" data-reveal data-ko="자격 · 역량" data-en="Credentials">Credentials</p>
